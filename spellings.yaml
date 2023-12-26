@@ -2,708 +2,711 @@
 spellings:
   a:
     sounds:
-      - schwa
-      - accent_schwa
-      - short_a
-      - long_a
-      - diaeresis_a
-      - dot_a
-      - short_e
-      - short_i
-      - long_o
-      - dot_o
+      - Schwa # ago
+      - AccentSchwa
+      - ShortA
+      - LongA
+      - UmlautA
+      - DotA
+      - ShortE
+      - ShortI
+      - LongO
+      - DotO
+  a-e:
+    sounds:
+      - LongA
   aa:
     sounds:
-      - diaeresis_a
+      - UmlautA
   aar:
     sounds:
-      - dot_a
+      - DotA
   ae:
     sounds:
-      - short_a
-      - long_a
-      - short_e
-      - long_e
+      - ShortA
+      - LongA
+      - ShortE
+      - LongE
   ah:
     sounds:
-      - schwa
-      - diaeresis_a
-      - dot_o
+      - Schwa
+      - UmlautA
+      - DotO
   ai:
     sounds:
-      - schwa
-      - short_a
-      - long_a
-      - short_e
-      - long_i
+      - Schwa
+      - ShortA
+      - LongA
+      - ShortE
+      - LongI
   ain:
     sounds:
-      - schwa_m
-      - schwa_n
+      - SchwaM
+      - SchwaN
   al:
     sounds:
-      - schwa_l
+      - SchwaL
   ao:
     sounds:
-      - long_o
+      - LongO
   aou:
     sounds:
-      - au
+      - Au
   ar:
     sounds:
-      - schwa_r
-      - dot_a
+      - SchwaR
+      - DotA
   au:
     sounds:
-      - long_a
-      - diaeresis_a
-      - long_o
-      - short_a
-      - dot_a
-      - au
-      - dot_o
+      - LongA
+      - UmlautA
+      - LongO
+      - ShortA
+      - DotA
+      - Au
+      - DotO
   aw:
     sounds:
-      - dot_o
-      - oi
+      - DotO
+      - Oi
   ay:
     sounds:
-      - short_a
-      - long_a
-      - short_e
-      - long_e
+      - ShortA
+      - LongA
+      - ShortE
+      - LongE
   aye:
     sounds:
-      - long_i
+      - LongI
   b:
     sounds:
-      - b
+      - B
   bb:
     sounds:
-      - b
+      - B
   bh:
     sounds:
-      - b
+      - B
   bt:
     sounds:
-      - t
+      - T
   c:
     sounds:
-      - k
-      - s
-      - sh
-      - ch
+      - K
+      - S
+      - Sh
+      - Ch
   cc:
     sounds:
-      - k
+      - K
   cch:
     sounds:
-      - k
+      - K
   ch:
     sounds:
-      - ch
-      - h
-      - j
-      - k
-      - underline_k
-      - sh
+      - Ch
+      - H
+      - J
+      - K
+      - UnderlineK
+      - Sh
   chi:
     sounds:
-      - sh
+      - Sh
   chm:
     sounds:
-      - m
+      - M
   chsi:
     sounds:
-      - sh
+      - Sh
   cht:
     sounds:
-      - t
+      - T
   chth:
     sounds:
-      - th
+      - Th
   ci:
     sounds:
-      - sh
+      - Sh
   ck:
     sounds:
-      - k
+      - K
   cq:
     sounds:
-      - k
+      - K
   cqu:
     sounds:
-      - k
+      - K
   ct:
     sounds:
-      - t
+      - T
   cu:
     sounds:
-      - k
+      - K
   cz:
     sounds:
-      - ch
-      - z
+      - Ch
+      - Z
   d:
     sounds:
-      - d
+      - D
   dd:
     sounds:
-      - d
-      - underline_th
+      - D
+      - UnderlineTh
   dg:
     sounds:
-      - j
+      - J
   dh:
     sounds:
-      - d
-      - underline_th
+      - D
+      - UnderlineTh
   di:
     sounds:
-      - j
+      - J
   dj:
     sounds:
-      - j
+      - J
   e:
     sounds:
-      - schwa
-      - short_a
-      - long_a
-      - diaeresis_a
-      - short_e
-      - long_e
-      - short_i
+      - Schwa
+      - ShortA
+      - LongA
+      - UmlautA
+      - ShortE
+      - LongE
+      - ShortI
   ea:
     sounds:
-      - schwa
-      - short_a
-      - long_a
-      - diaeresis_a
-      - short_e
-      - long_e
-      - short_i
+      - Schwa
+      - ShortA
+      - LongA
+      - UmlautA
+      - ShortE
+      - LongE
+      - ShortI
   ear:
     sounds:
-      - accent_schwa_r
+      - AccentSchwaR
   eau:
     sounds:
-      - schwa
-      - diaeresis_a
-      - long_o
+      - Schwa
+      - UmlautA
+      - LongO
   ed:
     sounds:
-      - d
-      - t
+      - D
+      - T
   ee:
     sounds:
-      - long_a
-      - long_e
-      - short_i
+      - LongA
+      - LongE
+      - ShortI
   eey:
     sounds:
-      - diaeresis_u
+      - UmlautU
   ei:
     sounds:
-      - schwa
-      - short_a
-      - long_a
-      - short_e
-      - long_e
-      - short_i
-      - long_i
+      - Schwa
+      - ShortA
+      - LongA
+      - ShortE
+      - LongE
+      - ShortI
+      - LongI
   el:
     sounds:
-      - schwa_l
+      - SchwaL
   en:
     sounds:
-      - schwa_m
-      - schwa_n
+      - SchwaM
+      - SchwaN
   eo:
     sounds:
-      - schwa
-      - short_e
-      - long_e
-      - long_o
-      - dot_o
+      - Schwa
+      - ShortE
+      - LongE
+      - LongO
+      - DotO
   er:
     sounds:
-      - schwa_r
-      - accent_schwa_r
+      - SchwaR
+      - AccentSchwaR
   ernm:
     sounds:
-      - schwa_m
+      - SchwaM
   err:
     sounds:
-      - accent_schwa_r
+      - AccentSchwaR
   et:
     sounds:
-      - long_a
+      - LongA
   eu:
     sounds:
-      - oi
-      - diaeresis_u
+      - Oi
+      - UmlautU
   eur:
     sounds:
-      - schwa_r
-      - accent_schwa_r
+      - SchwaR
+      - AccentSchwaR
   ew:
     sounds:
-      - long_o
-      - diaeresis_u
+      - LongO
+      - UmlautU
   ey:
     sounds:
-      - long_a
-      - long_e
-      - long_i
+      - LongA
+      - LongE
+      - LongI
   eye:
     sounds:
-      - long_i
+      - LongI
   f:
     sounds:
-      - f
-      - v
+      - F
+      - V
   ff:
     sounds:
-      - f
+      - F
   g:
     sounds:
-      - g
-      - h
-      - j
+      - G
+      - H
+      - J
   gg:
     sounds:
-      - g
-      - j
+      - G
+      - J
   gh:
     sounds:
-      - f
-      - g
-      - k
-      - underline_k
-      - th
+      - F
+      - G
+      - K
+      - UnderlineK
+      - Th
   ght:
     sounds:
-      - t
-      - th
+      - T
+      - Th
   gi:
     sounds:
-      - j
+      - J
   gm:
     sounds:
-      - m
+      - M
   gn:
     sounds:
-      - n
+      - N
   gu:
     sounds:
-      - g
+      - G
   h:
     sounds:
-      - h
-      - underline_k
+      - H
+      - UnderlineK
   i:
     sounds:
-      - schwa
-      - short_a
-      - diaeresis_a
-      - short_e
-      - long_e
-      - short_i
-      - long_i
-      - y
+      - Schwa
+      - ShortA
+      - UmlautA
+      - ShortE
+      - LongE
+      - ShortI
+      - LongI
+      - Y
   ia:
     sounds:
-      - schwa
-      - short_i
+      - Schwa
+      - ShortI
   ie:
     sounds:
-      - long_a
-      - long_e
-      - short_i
-      - long_i
+      - LongA
+      - LongE
+      - ShortI
+      - LongI
   ieu:
     sounds:
-      - short_e
-      - diaeresis_u
+      - ShortE
+      - UmlautU
   io:
     sounds:
-      - schwa
+      - Schwa
   ir:
     sounds:
-      - schwa_r
-      - accent_schwa_r
+      - SchwaR
+      - AccentSchwaR
   irr:
     sounds:
-      - accent_schwa_r
+      - AccentSchwaR
   j:
     sounds:
-      - h
-      - j
-      - y
+      - H
+      - J
+      - Y
   jj:
     sounds:
-      - j
+      - J
   ju:
     sounds:
-      - hw
-      - v
-      - w
+      - Hw
+      - V
+      - W
   k:
     sounds:
-      - k
+      - K
   kh:
     sounds:
-      - k
+      - K
   kk:
     sounds:
-      - k
+      - K
   kn:
     sounds:
-      - n
+      - N
   l:
     sounds:
-      - l
-      - schwa_l
+      - L
+      - SchwaL
   ld:
     sounds:
-      - d
+      - D
   le:
     sounds:
-      - schwa_l
+      - SchwaL
   lf:
     sounds:
-      - f
+      - F
   lh:
     sounds:
-      - l
+      - L
   lk:
     sounds:
-      - k
+      - K
   ll:
     sounds:
-      - l
+      - L
   lm:
     sounds:
-      - m
+      - M
   ln:
     sounds:
-      - l
+      - L
   m:
     sounds:
-      - m
+      - M
   mb:
     sounds:
-      - m
+      - M
   mh:
     sounds:
-      - m
+      - M
   mm:
     sounds:
-      - m
+      - M
   mn:
     sounds:
-      - m
-      - n
+      - M
+      - N
   mp:
     sounds:
-      - n
+      - N
   n:
     sounds:
-      - n
-      - ng
+      - N
+      - Ng
   nd:
     sounds:
-      - ng
+      - Ng
   ng:
     sounds:
-      - ng
+      - Ng
   ngg:
     sounds:
-      - ng
+      - Ng
   ngu:
     sounds:
-      - ng
+      - Ng
   nn:
     sounds:
-      - n
+      - N
   o:
     sounds:
-      - schwa
-      - accent_schwa
-      - diaeresis_a
-      - short_i
-      - long_o
-      - dot_o
-      - diaeresis_u
-      - dot_u
+      - Schwa
+      - AccentSchwa
+      - UmlautA
+      - ShortI
+      - LongO
+      - DotO
+      - UmlautU
+      - DotU
   oa:
     sounds:
-      - schwa
-      - long_o
-      - dot_o
+      - Schwa
+      - LongO
+      - DotO
   oe:
     sounds:
-      - schwa
-      - accent_schwa
-      - long_e
-      - long_o
-      - diaeresis_u
+      - Schwa
+      - AccentSchwa
+      - LongE
+      - LongO
+      - UmlautU
   oeu:
     sounds:
-      - diaeresis_u
+      - UmlautU
   oh:
     sounds:
-      - long_o
-  oi:
+      - LongO
+  Oi:
     sounds:
-      - schwa
-      - oi
+      - Schwa
+      - Oi
   olo:
     sounds:
-      - r
+      - R
   'on':
     sounds:
-      - schwa_n
+      - SchwaN
   oo:
     sounds:
-      - accent_schwa
-      - long_o
-      - diaeresis_u
-      - dot_u
+      - AccentSchwa
+      - LongO
+      - UmlautU
+      - DotU
   or:
     sounds:
-      - schwa_r
-      - accent_schwa_r
+      - SchwaR
+      - AccentSchwaR
   ou:
     sounds:
-      - schwa
-      - accent_schwa
-      - diaeresis_a
-      - au
-      - long_o
-      - dot_o
-      - diaeresis_u
-      - dot_u
-      - w
+      - Schwa
+      - AccentSchwa
+      - UmlautA
+      - Au
+      - LongO
+      - DotO
+      - UmlautU
+      - DotU
+      - W
   our:
     sounds:
-      - schwa_r
-      - accent_schwa_r
+      - Schwa
+      - AccentSchwaR
   ow:
     sounds:
-      - schwa
-      - au
-      - dot_o
+      - Schwa
+      - Au
+      - DotO
   oy:
     sounds:
-      - long_i
-      - oi
+      - LongI
+      - Oi
   p:
     sounds:
-      - p
+      - P
   pb:
     sounds:
-      - b
+      - B
   ph:
     sounds:
-      - f
-      - p
-      - v
+      - F
+      - P
+      - V
   phth:
     sounds:
-      - t
-      - th
+      - T
+      - Th
   pn:
     sounds:
-      - n
+      - N
   pp:
     sounds:
-      - p
+      - P
   ps:
     sounds:
-      - s
+      - S
   psh:
     sounds:
-      - sh
+      - Sh
   pt:
     sounds:
-      - t
+      - T
   q:
     sounds:
-      - k
+      - K
   qu:
     sounds:
-      - k
+      - K
   r:
     sounds:
-      - r
+      - R
   re:
     sounds:
-      - schwa_r
+      - SchwaR
   rh:
     sounds:
-      - r
+      - R
   rr:
     sounds:
-      - r
+      - R
   rrh:
     sounds:
-      - r
+      - R
   s:
     sounds:
-      - s
-      - sh
-      - z
-      - zh
+      - S
+      - Sh
+      - Z
+      - Zh
   sc:
     sounds:
-      - s
-      - sh
-      - z
+      - S
+      - Sh
+      - Z
   sch:
     sounds:
-      - s
-      - sh
+      - S
+      - Sh
   sci:
     sounds:
-      - sh
+      - Sh
   se:
     sounds:
-      - sh
+      - Sh
   sh:
     sounds:
-      - sh
+      - Sh
   si:
     sounds:
-      - ch
-      - sh
-      - zh
+      - Ch
+      - Sh
+      - Zh
   sk:
     sounds:
-      - sh
+      - Sh
   ss:
     sounds:
-      - s
-      - sh
-      - z
+      - S
+      - Sh
+      - Z
   ssi:
     sounds:
-      - sh
-      - zh
+      - Sh
+      - Zh
   st:
     sounds:
-      - s
+      - S
   sth:
     sounds:
-      - s
+      - S
   t:
     sounds:
-      - t
+      - T
   tch:
     sounds:
-      - ch
+      - Ch
   te:
     sounds:
-      - ch
+      - Ch
   th:
     sounds:
-      - t
-      - th
-      - underline_th
+      - T
+      - Th
+      - UnderlineTh
   ti:
     sounds:
-      - ch
-      - sh
+      - Ch
+      - Sh
   ts:
     sounds:
-      - z
+      - Z
   tt:
     sounds:
-      - t
+      - T
   tz:
     sounds:
-      - s
-      - z
+      - S
+      - Z
   u:
     sounds:
-      - schwa
-      - accent_schwa
-      - short_e
-      - short_i
-      - diaeresis_u
-      - dot_u
-      - w
+      - Schwa
+      - AccentSchwa
+      - ShortE
+      - ShortI
+      - UmlautU
+      - DotU
+      - W
   ua:
     sounds:
-      - long_o
+      - LongO
   ue:
     sounds:
-      - schwa
-      - diaeresis_u
+      - Schwa
+      - UmlautU
   ui:
     sounds:
-      - long_a
-      - short_i
-      - diaeresis_u
+      - LongA
+      - ShortI
+      - UmlautU
   uoy:
     sounds:
-      - oi
+      - Oi
   ur:
     sounds:
-      - schwa_r
-      - accent_schwa_r
+      - SchwaR
+      - AccentSchwaR
   urr:
     sounds:
-      - accent_schwa_r
+      - AccentSchwaR
   uy:
     sounds:
-      - long_i
+      - LongI
   v:
     sounds:
-      - b
-      - v
+      - B
+      - V
   vv:
     sounds:
-      - v
+      - V
   w:
     sounds:
-      - diaeresis_u
-      - v
-      - w
+      - UmlautU
+      - V
+      - W
   wh:
     sounds:
-      - h
-      - hw
-      - w
+      - H
+      - Hw
+      - W
   wr:
     sounds:
-      - r
+      - R
   x:
     sounds:
-      - z
+      - Z
   y:
     sounds:
-      - schwa
-      - accent_schwa
-      - long_e
-      - short_i
-      - long_i
-      - y
+      - Schwa
+      - AccentSchwa
+      - LongE
+      - ShortI
+      - LongI
+      - Y
   yl:
     sounds:
-      - schwa_l
+      - SchwaL
   yr:
     sounds:
-      - schwa_r
-      - accent_schwa_r
+      - SchwaR
+      - AccentSchwaR
   yrrh:
     sounds:
-      - accent_schwa_r
+      - AccentSchwaR
   z:
     sounds:
-      - s
-      - z
-      - zh
+      - S
+      - Z
+      - Zh
   zz:
     sounds:
-      - z
+      - Z

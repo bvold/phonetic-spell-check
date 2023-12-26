@@ -1,5 +1,5 @@
 graphemes:
-  schwa:
+  Schwa:
     spellings:
       - a    # abut
       - e    # silent
@@ -21,7 +21,7 @@ graphemes:
       - ue   # guerrilla
       - eau  # bureaucrat
       - NULL # chasm \'kaz-əm\, McCoy \mə-'kói\
-  accent_schwa:
+  AccentSchwa:
     spellings:
       - a   # was
       - o   # above
@@ -30,7 +30,7 @@ graphemes:
       - oe  # does
       - oo  # flood
       - ou  # rough
-  schwa_r:
+  SchwaR:
     spellings:
       - ar  # liar
       - er  # batter
@@ -41,7 +41,7 @@ graphemes:
       - yr  # martyr
       - eur # chauffeur
       - our # glamour
-  accent_schwa_r:
+  AccentSchwaR:
     spellings:
       - er   # fern
       - ir   # bird
@@ -56,7 +56,7 @@ graphemes:
       - urr  # hurry
       - yrrh # myrra
       - olo  # colonel
-  short_a:
+  ShortA:
     spellings:
       - a  # mat, calf
       - e  # there(u)
@@ -68,7 +68,7 @@ graphemes:
       - ea # bear(u)
       - ei # their(u)
       - er # chert(u)
-  long_a:
+  LongA:
     spellings:
       - a  # apron
       - a-e # fade(fixme)
@@ -87,7 +87,7 @@ graphemes:
       - ui # Uitlander
       - et # (f) beret
       - ez # (f) rendezvous
-  umlaut_a: # fixme(umlaut)
+  UmlautA: # fixme(umlaut)
     spellings:
       - a  # farther, father, guard
       - e  # entree, sergeant(fixme)
@@ -100,19 +100,19 @@ graphemes:
       - ou # nought
       - eau # bureaucracy
       - oi  # patois
-  dot_a:
+  DotA:
     spellings:
       - a  # father
       - ar # cart(u) (in the speech of so-called r-droppers)
       - au # aunt
       - aar # bazaar(u) (in the speech of so-called r-droppers)
-  au:
+  Au:
     spellings:
       - au # sauerkraut
       - ou # loud, bough(fixme)
       - ow # now
       - aou # caoutchouc (unvulcanized natural rubber)
-  short_e:
+  ShortE:
     spellings:
       - a # any
       - e # bet, err, guess
@@ -128,7 +128,7 @@ graphemes:
       - oe # foetid
       - ieu # lieutenant
       - NULL # mbira \em-'bir-ə\
-  long_e:
+  LongE:
     spellings:
       - e  # me
       - i  # ski
@@ -145,7 +145,7 @@ graphemes:
       - agh # shillelagh
       - ah  # shellalah
       - ois # chamois
-  short_i:
+  ShortI:
     spellings:
       - a  # homage(fixme)
       - e  # England, pretty, serious
@@ -159,7 +159,7 @@ graphemes:
       - ia # carriage(fixme)
       - ie # sieve
       - ui # building
-  long_i:
+  LongI:
     spellings:
       - i  # fine, sigh
       - i-e # guide(fixme, i-e)
@@ -175,7 +175,7 @@ graphemes:
       - aye # aye
       - eye # eye
       - oy  # choir(fixme)
-  long_o:
+  LongO:
     spellings:
       - a  # quahog, cupola
       - o  # folk
@@ -194,7 +194,7 @@ graphemes:
       - eau # plateau
       - NULL # burgh(u)
       - ewe # eye(u)
-  dot_o:
+  DotO:
     spellings:
       - a  # ball, talk
       - o  # soft
@@ -205,14 +205,14 @@ graphemes:
       - oa # broad
       - ou # cough, thought(fixme), => ough
       - ow # toward
-  oi:
+  Oi:
     spellings:
       - aw # lawyer
       - eu # Freudian
       - oi # coin
       - oy # boy
       - uoy # buoy
-  umlaut_u:
+  UmlautU:
     spellings:
       - o   # do
       - u   # flu
@@ -230,20 +230,20 @@ graphemes:
       - eau # beauty
       - ewe # ewe
       - eew # (u) peewit
-  dot_u:
+  DotU:
     spellings:
       - o # woman, wolf
       - u # pull
       - oo # wood
       - ou # could
-  b:
+  B:
     spellings:
       - b  # baby
       - v  # (u) government, seven
       - bb # rubber
       - bh # bhang
       - pb # cupboard, raspberry (fixme, could be just silent 'p')
-  ch:
+  Ch:
     spellings:
       - c  # cello
       - ch # chin
@@ -253,39 +253,39 @@ graphemes:
       - ti # question
       - tch # match
       - t   # nature fixme
-  d:
+  D:
     spellings:
       - d  # did
       - dd # ladder
       - dh # (u) dhow
       - ed # seemed
       - ld # would (fixme? silent l?)
-  f:
+  F:
     spellings:
       - f  # fan, safe
       - ff # offer
       - gh # laugh
       - lf # calf
       - ph # telephone
-  g:
+  G:
     spellings:
       - g  # go
       - gg # egg
       - gh # ghost
       - gu # guide, plague
       - x  # (u) example
-  h:
+  H:
     spellings:
       - g  # Gila monster
       - h  # hat
       - j  # (u) jai alai
       - ch # (u) Chanukah
       - wh # who
-  hw:
+  Hw:
     spellings:
       - ju # marijuana, San Juan
       - wh # whale, when
-  j:
+  J:
     spellings:
       - g  # gem
       - j  # joy
@@ -297,7 +297,7 @@ graphemes:
       - gi # region
       - jj # hajj
       - d  # (u) graduation (fixme? du?)
-  k:
+  K:
     spellings:
       - c  # catch
       - k  # kid, take
@@ -315,25 +315,25 @@ graphemes:
       - cch # saccharine
       - cqu # lacquer
       - x # tax (fixme? only with ks)
-  underline_k:
+  UnderlineK:
     spellings:
       - h  # (u) Hanukkah, Hasid
       - ch # (u) loch, Chasid
       - gh # (u) lough
-  l:
+  L:
     spellings:
       - l  # low, sale
       - ll # filling, faille
       - lh # (u) Lhasa apso
       - ln # (u) kiln
-  schwa_l:
+  SchwaL:
     spellings:
       - l  # dirndl
       - al # pedal
       - el # betel
       - le # battle
       - yl # phenyl
-  m:
+  M:
     spellings:
       - m  # me, come
       - gm # phlegm
@@ -343,12 +343,12 @@ graphemes:
       - mm # dummy
       - mn # autumn
       - chm # (u) drachm
-  schwa_m:
+  SchwaM:
     spellings:
       - en   # (l == lazy) open, happen
       - ain  # (l) captain
       - ernm # (l) government
-  n:
+  N:
     spellings:
       - n  # no, alone
       - gn # sign, gnat, reign
@@ -357,24 +357,24 @@ graphemes:
       - mp # (u) comptroller
       - nn # banner
       - pn # pneumonia
-  schwa_n:
+  SchwaN:
     spellings:
       - en # sudden
       - on # cotton
       - ain # certain
-  ng:
+  Ng:
     spellings:
       - n  # ink, finger, orangutan
       - nd # handkerchief
       - ng # sing, singer
       - ngg # mah-jongg
       - ngu # harangue
-  p:
+  P:
     spellings:
       - p  # port, stop, ape
       - ph # shepherd, diphthong
       - pp # supper
-  r:
+  R:
     spellings:
       - r  # red, care, card
       - rh # rhyme
@@ -382,7 +382,7 @@ graphemes:
       - wr # write
       - rrh # diarrhea
       - olo # (u) colonel(fixme, could confuse spell checker, color, colon and those would be wrong
-  s:
+  S:
     spellings:
       - c  # proceed, race
       - s  # say, loose
@@ -396,7 +396,7 @@ graphemes:
       - sch # (u) schism
       - sth # isthmus
       - x   # only with ks
-  sh:
+  Sh:
     spellings:
       - c  # oceanic
       - s  # sugar
@@ -415,7 +415,7 @@ graphemes:
       - sci # conscious
       - ssi # mission
       - chsi # fuchsia
-  t:
+  T:
     spellings:
       - t   # tea, eat, late
       - bt  # debt
@@ -427,26 +427,26 @@ graphemes:
       - cht # yacht
       - ght # night, straight
       - phth  # (u) phthisic
-  th:
+  Th:
     spellings:
       - gh  # (l) trough
       - th  # thin, breath
       - ght # (u) drought
       - chth # (u) chthonic
       - phth # (u) phthalein
-  underline_th:
+  UnderlineTh:
     spellings:
       - dd # (u) eisteddfod
       - dh # (u) edh
       - th # this, teething, breathe
-  v:
+  V:
     spellings:
       - f  # of
       - v  # very, save
       - w  # way
       - ph # Stephen
       - vv # savvy
-  w:
+  W:
     spellings:
       - u  # persuade, quit
       - w  # way
@@ -457,7 +457,7 @@ graphemes:
       - ch # (u) choir with k+w(fixme)
       - ois # (u) patois
       - ous # (u) strenuous
-  y:
+  Y:
     spellings:
       - i # opinion
       - j # hallelujah
@@ -468,7 +468,7 @@ graphemes:
       - eu # (u?) feud fu
       - ew # (u?) few fu
       - ll # (f) tortilla
-  z:
+  Z:
     spellings:
       - s  # days, was, please
       - x  # xylophone, bateaux
@@ -480,13 +480,13 @@ graphemes:
       - tz # tzar
       - zz # buzz
       - x  # example (with eg-zample)
-  zh:
+  Zh:
     spellings:
       - s   # fission, measure
       - z   # azure
       - si  # vision
       - ssi #
-  silent:
+  Silent:
     spellings:
       - b   # comb, debt
       - c   # Connecticut, ctenoid
