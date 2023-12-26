@@ -1,0 +1,515 @@
+graphemes:
+  schwa:
+    spellings:
+      - a    # abut
+      - e    # silent
+      - i    # maritime
+      - o    # connect
+      - u    # circus
+      - y    # physician
+      - ah   # verandah (u)
+      - ai   # captain
+      - ea   # ocean
+      - ei   # mullein
+      - eo   # luncheon
+      - ia   # collegiate
+      - io   # fashion
+      - oa   # waistcoat (u)
+      - oe   # Phoenician
+      - oi   # porpoise
+      - ou   # famous
+      - ue   # guerrilla
+      - eau  # bureaucrat
+      - NULL # chasm \'kaz-əm\, McCoy \mə-'kói\
+  accent_schwa:
+    spellings:
+      - a   # was
+      - o   # above
+      - u   # humdrum
+      - y   # Cymric
+      - oe  # does
+      - oo  # flood
+      - ou  # rough
+  schwa_r:
+    spellings:
+      - ar  # liar
+      - er  # batter
+      - ir  # elixir
+      - or  # honor
+      - re  # ogre
+      - ur  # injurer
+      - yr  # martyr
+      - eur # chauffeur
+      - our # glamour
+  accent_schwa_r:
+    spellings:
+      - er   # fern
+      - ir   # bird
+      - or   # world
+      - ur   # fur
+      - yr   # myrtle
+      - ear  # earth
+      - err  # err
+      - eur  # chauffeur
+      - irr  # squirrel
+      - our  # journal
+      - urr  # hurry
+      - yrrh # myrra
+      - olo  # colonel
+  short_a:
+    spellings:
+      - a  # mat, calf
+      - e  # there(u)
+      - i  # meringue
+      - ae # aerial (u)
+      - ai # plaid, air(u)
+      - au # aunt
+      - ay # prayer
+      - ea # bear(u)
+      - ei # their(u)
+      - er # chert(u)
+  long_a:
+    spellings:
+      - a  # apron
+      - a-e # fade(fixme)
+      - e  # melee
+      - ae # maelstrom
+      - ai # main, straight(fixme)
+      - ao # gaol
+      - au # gauge(fixme)
+      - au-e # gauge
+      - ay # prayer
+      - ea # steak
+      - ee # matinee
+      - ei # vein, reighn(fixme), weigh(fixme)
+      - ey # prey, grey
+      - ie # lingerie(u)
+      - ui # Uitlander
+      - et # (f) beret
+      - ez # (f) rendezvous
+  umlaut_a: # fixme(umlaut)
+    spellings:
+      - a  # farther, father, guard
+      - e  # entree, sergeant(fixme)
+      - i  # lingerie
+      - o  # cot
+      - aa # bazaar
+      - ah # shah
+      - au # nautical
+      - ea # heart
+      - ou # nought
+      - eau # bureaucracy
+      - oi  # patois
+  dot_a:
+    spellings:
+      - a  # father
+      - ar # cart(u) (in the speech of so-called r-droppers)
+      - au # aunt
+      - aar # bazaar(u) (in the speech of so-called r-droppers)
+  au:
+    spellings:
+      - au # sauerkraut
+      - ou # loud, bough(fixme)
+      - ow # now
+      - aou # caoutchouc (unvulcanized natural rubber)
+  short_e:
+    spellings:
+      - a # any
+      - e # bet, err, guess
+      - i # vanilla
+      - u # bury
+      - ae # aesthetic, aerial
+      - ai # said, air
+      - ay # says, prayer
+      - ea # bread, bear
+      - ei # heifer, their
+      - eo # leopard
+      - ie # friend
+      - oe # foetid
+      - ieu # lieutenant
+      - NULL # mbira \em-'bir-ə\
+  long_e:
+    spellings:
+      - e  # me
+      - i  # ski
+      - y  # pretty
+      - ae # aeon
+      - ay # Monday, quay
+      - ea # easy
+      - ee # see, beet
+      - ei # receive(fixme)
+      - eo # people
+      - ey # key
+      - ie # grief
+      - oe # phoebe, foetid
+      - agh # shillelagh
+      - ah  # shellalah
+      - ois # chamois
+  short_i:
+    spellings:
+      - a  # homage(fixme)
+      - e  # England, pretty, serious
+      - i  # tip
+      - o  # women
+      - u  # busy
+      - y  # myth
+      - ea # hear
+      - ee # been, beer, creek
+      - ei # counterfeit, weird
+      - ia # carriage(fixme)
+      - ie # sieve
+      - ui # building
+  long_i:
+    spellings:
+      - i  # fine, sigh
+      - i-e # guide(fixme, i-e)
+      - y  # sly
+      - ai # aisle, aioli
+      - ay # bayou, papaya
+      - ei # heist, height(fixme, height => eigh)
+      - ey # geyser
+      - ie # lie
+      - oy # coyote
+      - uy # buy
+      - ye # dye
+      - aye # aye
+      - eye # eye
+      - oy  # choir(fixme)
+  long_o:
+    spellings:
+      - a  # quahog, cupola
+      - o  # folk
+      - o-e # bone
+      - ao  # pharaoh
+      - au  # chauvinist
+      - eo  # yeoman
+      - ew  # sew
+      - oa  # coat
+      - oe  # doe (fixme, o-e?)
+      - oh  # oh, Noh
+      - oo  # brooch
+      - ou  # boulder, though(fixme)
+      - ow  # know
+      - ua  # quahog(fixme)
+      - eau # plateau
+      - NULL # burgh(u)
+      - ewe # eye(u)
+  dot_o:
+    spellings:
+      - a  # ball, talk
+      - o  # soft
+      - ah # Utah
+      - au # sausage, caught(fixme)
+      - aw # saw
+      - eo # Georgian(u)
+      - oa # broad
+      - ou # cough, thought(fixme), => ough
+      - ow # toward
+  oi:
+    spellings:
+      - aw # lawyer
+      - eu # Freudian
+      - oi # coin
+      - oy # boy
+      - uoy # buoy
+  umlaut_u:
+    spellings:
+      - o   # do
+      - u   # flu
+      - w   # (u) crwth, cwm
+      - eu  # rheumatism, maneuver
+      - ew  # crew
+      - oe  # shoe
+      - oo  # school
+      - ou  # youth
+      - ue  # blue
+      - ui  # cruise(fixme? ui-e?)
+      - eew # leeward(fixme)
+      - ieu # lieutenant, lieu
+      - oeu # manoeuvre
+      - eau # beauty
+      - ewe # ewe
+      - eew # (u) peewit
+  dot_u:
+    spellings:
+      - o # woman, wolf
+      - u # pull
+      - oo # wood
+      - ou # could
+  b:
+    spellings:
+      - b  # baby
+      - v  # (u) government, seven
+      - bb # rubber
+      - bh # bhang
+      - pb # cupboard, raspberry (fixme, could be just silent 'p')
+  ch:
+    spellings:
+      - c  # cello
+      - ch # chin
+      - cz # Czech
+      - si # tension
+      - te # righteous
+      - ti # question
+      - tch # match
+      - t   # nature fixme
+  d:
+    spellings:
+      - d  # did
+      - dd # ladder
+      - dh # (u) dhow
+      - ed # seemed
+      - ld # would (fixme? silent l?)
+  f:
+    spellings:
+      - f  # fan, safe
+      - ff # offer
+      - gh # laugh
+      - lf # calf
+      - ph # telephone
+  g:
+    spellings:
+      - g  # go
+      - gg # egg
+      - gh # ghost
+      - gu # guide, plague
+      - x  # (u) example
+  h:
+    spellings:
+      - g  # Gila monster
+      - h  # hat
+      - j  # (u) jai alai
+      - ch # (u) Chanukah
+      - wh # who
+  hw:
+    spellings:
+      - ju # marijuana, San Juan
+      - wh # whale, when
+  j:
+    spellings:
+      - g  # gem
+      - j  # joy
+      - ch # Greenwich (fixme?)
+      - dg # budget, bridge
+      - di # soldier
+      - dj # adjective
+      - gg # exaggerate
+      - gi # region
+      - jj # hajj
+      - d  # (u) graduation (fixme? du?)
+  k:
+    spellings:
+      - c  # catch
+      - k  # kid, take
+      - q  # quit
+      - cc # account
+      - ch # chaos, loch, schism
+      - ck # pick
+      - cq # acquire
+      - cu # biscuit
+      - gh # (u) lough
+      - kh # khaki
+      - kk # chukka, pukka
+      - lk # talk(fixme? silent l?)
+      - qu # liquor, plaque, quay
+      - cch # saccharine
+      - cqu # lacquer
+      - x # tax (fixme? only with ks)
+  underline_k:
+    spellings:
+      - h  # (u) Hanukkah, Hasid
+      - ch # (u) loch, Chasid
+      - gh # (u) lough
+  l:
+    spellings:
+      - l  # low, sale
+      - ll # filling, faille
+      - lh # (u) Lhasa apso
+      - ln # (u) kiln
+  schwa_l:
+    spellings:
+      - l  # dirndl
+      - al # pedal
+      - el # betel
+      - le # battle
+      - yl # phenyl
+  m:
+    spellings:
+      - m  # me, come
+      - gm # phlegm
+      - lm # (u) calm
+      - mb # comb
+      - mh # (u) mho
+      - mm # dummy
+      - mn # autumn
+      - chm # (u) drachm
+  schwa_m:
+    spellings:
+      - en   # (l == lazy) open, happen
+      - ain  # (l) captain
+      - ernm # (l) government
+  n:
+    spellings:
+      - n  # no, alone
+      - gn # sign, gnat, reign
+      - kn # knot
+      - mn # mnemonic
+      - mp # (u) comptroller
+      - nn # banner
+      - pn # pneumonia
+  schwa_n:
+    spellings:
+      - en # sudden
+      - on # cotton
+      - ain # certain
+  ng:
+    spellings:
+      - n  # ink, finger, orangutan
+      - nd # handkerchief
+      - ng # sing, singer
+      - ngg # mah-jongg
+      - ngu # harangue
+  p:
+    spellings:
+      - p  # port, stop, ape
+      - ph # shepherd, diphthong
+      - pp # supper
+  r:
+    spellings:
+      - r  # red, care, card
+      - rh # rhyme
+      - rr # merry
+      - wr # write
+      - rrh # diarrhea
+      - olo # (u) colonel(fixme, could confuse spell checker, color, colon and those would be wrong
+  s:
+    spellings:
+      - c  # proceed, race
+      - s  # say, loose
+      - z  # pretzel
+      - ps # psalm
+      - sc # fascinate, scissors
+      - ss # mass
+      - st # listen, Christmas
+      - ts # (u) tsar
+      - tz # (u) tzar
+      - sch # (u) schism
+      - sth # isthmus
+      - x   # only with ks
+  sh:
+    spellings:
+      - c  # oceanic
+      - s  # sugar
+      - ch # machine
+      - ci # special
+      - sc # fascism
+      - se # nauseous
+      - sh # shy
+      - si # emulsion
+      - sk # ski
+      - ss # tissue
+      - ti # nation
+      - chi # marchioness
+      - psh # (y) pshaw
+      - sch # schist
+      - sci # conscious
+      - ssi # mission
+      - chsi # fuchsia
+  t:
+    spellings:
+      - t   # tea, eat, late
+      - bt  # debt
+      - ct  # ctenoid
+      - ed  # walked
+      - pt  # ptomaine, receipt
+      - th  # thyme, Thomas, Thai
+      - tt  # button
+      - cht # yacht
+      - ght # night, straight
+      - phth  # (u) phthisic
+  th:
+    spellings:
+      - gh  # (l) trough
+      - th  # thin, breath
+      - ght # (u) drought
+      - chth # (u) chthonic
+      - phth # (u) phthalein
+  underline_th:
+    spellings:
+      - dd # (u) eisteddfod
+      - dh # (u) edh
+      - th # this, teething, breathe
+  v:
+    spellings:
+      - f  # of
+      - v  # very, save
+      - w  # way
+      - ph # Stephen
+      - vv # savvy
+  w:
+    spellings:
+      - u  # persuade, quit
+      - w  # way
+      - ju # (u, f) San Juan, marijuana
+      - ou # (u) ouabain, bivouac
+      - wh # whale, when
+      - o  # (u) one(fixme)
+      - ch # (u) choir with k+w(fixme)
+      - ois # (u) patois
+      - ous # (u) strenuous
+  y:
+    spellings:
+      - i # opinion
+      - j # hallelujah
+      - y # yard
+      - eau # (u?) beauty
+      - ñ # cañon
+      - u # cute (fixme ku), strenuous, unit
+      - eu # (u?) feud fu
+      - ew # (u?) few fu
+      - ll # (f) tortilla
+  z:
+    spellings:
+      - s  # days, was, please
+      - x  # xylophone, bateaux
+      - z  # zone, haze
+      - cz # czar
+      - sc # (u) discern
+      - ss # scissors
+      - ts # tsar
+      - tz # tzar
+      - zz # buzz
+      - x  # example (with eg-zample)
+  zh:
+    spellings:
+      - s   # fission, measure
+      - z   # azure
+      - si  # vision
+      - ssi #
+  silent:
+    spellings:
+      - b   # comb, debt
+      - c   # Connecticut, ctenoid
+      - ch  # yacht, chthonic
+      - e   # date, live, battle, seemed, plague
+      - g   # gnat, sign, diaphragm
+      - gh  # night, straight, though, thought
+      - h   # hour, honor, rhyme (fixme, i-e), thyme
+      - i   # business, parliament
+      - k   # knot, know
+      - l   # talk, folk, would, calm
+      - m   # mnemonic
+      - n   # autumn, government, kiln
+      - o   # sophomore
+      - p   # cupboard, pneumonia, psalm, ptomaine, raspberry
+      - ph  # phthalein, phthisic
+      - r   # surprise (suh-prise)
+      - s   # aisle, island, patois, demesne
+      - t   # beret, boatswain, Christmas, depot, listen
+      - th  # asthma, isthmus, northeaster (nor-easter)
+      - u   # biscuit(ui), build(ui), guest(gu), pursuivant, quay
+      - ue  # plague, plaque
+      - w   # who, write, two, sword, boatswain
+      - x   # faux pas, bateaux
+      - y   # (u) yeast
+      - z   # rendezvous (fixme ez = ay)
