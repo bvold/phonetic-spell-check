@@ -96,8 +96,28 @@ let pronunciation = ipa[i].replace(['/', '\'', 'ˈ','ˌ',','], "");
     };
 }
 
+// lazy_static! {
+//     static ref USR_SHARE_DICT_WORDS_HASHSET: Result<HashSet<String>, std::io::Error> = {
+//         let file_contents = std::fs::read_to_string("/usr/share/dict/words")?;
+//         let words = file_contents
+//             .lines()
+//             .map(|line| line.to_lowercase())
+//             .collect();
+//
+//         Ok(words)
+//     };
+// }
+// match dictionary {
+// Ok(words) => {
+// // Use the `words` HashSet here
+// },
+// Err(err) => {
+// // Handle the error gracefully
+// }
+// }
+
 lazy_static! {
-    static ref USR_DICT_WORDS_HASHSET: HashSet<String> = {
+    static ref USR_SHARE_DICT_WORDS_HASHSET: HashSet<String> = {
         let file = File::open("/usr/share/dict/words").unwrap();
         let reader = BufReader::new(file);
 
@@ -121,12 +141,12 @@ fn main() {
     let deserialized_spellings: Spellings =
         serde_yaml::from_str(&spellings).expect("Failed to deserialize YAML");
 
-    let graphemes = match read_graphemes_yaml() {
-        Some(value) => value,
-        None => return,
-    };
+    // let graphemes = match read_graphemes_yaml() {
+    //     Some(value) => value,
+    //     None => return,
+    // };
 
-    let deserialized_graphemes: Graphemes = serde_yaml::from_str(&graphemes).expect("Failed to deserialize YAML");
+    // let deserialized_graphemes: Graphemes = serde_yaml::from_str(&graphemes).expect("Failed to deserialize YAML");
 
     // // Access fields and print the deserialized struct
     // println!("Deserialized Struct:");
@@ -149,7 +169,7 @@ fn main() {
 
     // let original_word = "akwire";  // acquire
     // let original_word = "bizar";    // bizarre
-    let original_word = "semetary"; // cemetery
+    // let original_word = "semetary"; // cemetery
     // let original_word = "definitely";
     // let original_word = "ecstasy";
     // let original_word = "foreign";
@@ -157,12 +177,17 @@ fn main() {
     // let original_word = "harass";
     // let original_word = "independent";
     // let original_word = "jewelry";
+    let original_word = "yon";
 
-    let mut phoneme_array = phonemize(&deserialized_spellings, original_word.to_string());
+    let phoneme_array = phonemize(&deserialized_spellings, original_word.to_string());
+
+    println!("{:?}", phoneme_array);
 
     let mut parsings_array_set: HashSet<Vec<String>> = HashSet::new();
 
     gen_phoneme_permutations(&phoneme_array, Vec::new(), 0, &mut parsings_array_set);
+
+    println!("{:?}", parsings_array_set);
 
     let parsings_array : Vec<Vec<String>> = parsings_array_set.into_iter().collect();
 
@@ -191,7 +216,7 @@ fn main() {
         word_spelling_permutations.dedup();
 
         println!("{} permutations {:?}", word_spelling_permutations.len(), word_spelling_permutations);
-        
+
         for ipa_char_word in word_spelling_permutations {
             // if word is in CMU Pronunciation dict, add the words that collate there to list of corrections
             let word_vector: Option<&Vec<String>> = IPA_TO_DICT_WORD_MAP.get(ipa_char_word.as_str());
@@ -200,7 +225,7 @@ fn main() {
                 Some(words) => {
                     for word in words.iter() {
                         // CMU dict has words that are proper names and might not make sense here
-                        if USR_DICT_WORDS_HASHSET.contains(word) {
+                        if USR_SHARE_DICT_WORDS_HASHSET.contains(word) {
                             possible_corrections.insert(word);
                         }
                     }
@@ -316,26 +341,26 @@ fn read_spellings_yaml() -> Option<String> {
     Some(yaml_string)
 }
 
-fn read_graphemes_yaml() -> Option<String> {
-    // Specify the path to the YAML file
-    let file_path = "graphemes.yaml";
+// fn read_graphemes_yaml() -> Option<String> {
+//     // Specify the path to the YAML file
+//     let file_path = "graphemes.yaml";
+//
+//     // Read the YAML file content into a string
+//     let yaml_string = match read_yaml_file(file_path) {
+//         Ok(content) => content,
+//         Err(err) => {
+//             eprintln!("Error reading YAML file: {}", err);
+//             return None;
+//         }
+//     };
+//     Some(yaml_string)
+// }
 
-    // Read the YAML file content into a string
-    let yaml_string = match read_yaml_file(file_path) {
-        Ok(content) => content,
-        Err(err) => {
-            eprintln!("Error reading YAML file: {}", err);
-            return None;
-        }
-    };
-    Some(yaml_string)
-}
 
-
-fn add_unique_strings(data: &mut HashMap<usize, Vec<String>>, index: usize, new_strings: Vec<String>) {
-    for s in new_strings {
-        if !data.get(&index).unwrap_or(&Vec::new()).contains(&s) {
-            data.entry(index).or_insert_with(Vec::new).push(s);
-        }
-    }
-}
+// fn add_unique_strings(data: &mut HashMap<usize, Vec<String>>, index: usize, new_strings: Vec<String>) {
+//     for s in new_strings {
+//         if !data.get(&index).unwrap_or(&Vec::new()).contains(&s) {
+//             data.entry(index).or_insert_with(Vec::new).push(s);
+//         }
+//     }
+// }
