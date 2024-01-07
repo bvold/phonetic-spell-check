@@ -5,10 +5,8 @@ use std::fs::File;
 use std::io::{BufReader, Read, BufRead};
 use sound::Sound;
 use std::collections::HashMap;
-// use hashbrown::HashSet;
 use lazy_static::lazy_static;
 use strum::EnumMessage;
-// use ternary_tree::Tst;
 use edit_distance::edit_distance;
 
 mod sound;
@@ -20,12 +18,12 @@ struct Spelling {
 
 #[derive(Debug, Serialize, Deserialize)]
 struct Spellings {
-    spellings: std::collections::BTreeMap<String, Spelling>,
+    spellings: BTreeMap<String, Spelling>,
 }
 
 #[derive(Debug, Serialize, Deserialize)]
 struct Graphemes {
-    graphemes: std::collections::HashMap<String, Grapheme>,
+    graphemes: HashMap<String, Grapheme>,
 }
 
 #[derive(Debug, Serialize, Deserialize)]
@@ -95,6 +93,21 @@ let pronunciation = ipa[i].replace(['/', '\'', 'ˈ','ˌ',','], "");
                 }
 
         cmu_dict
+    };
+}
+
+lazy_static! {
+    static ref USR_DICT_WORDS_HASHSET: HashSet<String> = {
+        let file = File::open("/usr/share/dict/words").unwrap();
+        let reader = BufReader::new(file);
+
+        let mut words = HashSet::new();
+        for line in reader.lines() {
+            let word = line.unwrap().to_lowercase();
+            words.insert(word);
+        }
+
+        words
     };
 }
 
@@ -178,19 +191,7 @@ fn main() {
         word_spelling_permutations.dedup();
 
         println!("{} permutations {:?}", word_spelling_permutations.len(), word_spelling_permutations);
-
-        // Load /usr/share/dict/words for dictionary check
-        let file = File::open("/usr/share/dict/words").unwrap();
-        let reader = BufReader::new(file);
-        let mut usr_dict_words = HashSet::new();
-
-        for line in reader.lines() {
-            let word = line.unwrap();
-            usr_dict_words.insert(word.to_lowercase());
-        }
-
-
-
+        
         for ipa_char_word in word_spelling_permutations {
             // if word is in CMU Pronunciation dict, add the words that collate there to list of corrections
             let word_vector: Option<&Vec<String>> = IPA_TO_DICT_WORD_MAP.get(ipa_char_word.as_str());
@@ -199,7 +200,7 @@ fn main() {
                 Some(words) => {
                     for word in words.iter() {
                         // CMU dict has words that are proper names and might not make sense here
-                        if usr_dict_words.contains(word) {
+                        if USR_DICT_WORDS_HASHSET.contains(word) {
                             possible_corrections.insert(word);
                         }
                     }
