@@ -1,7 +1,30 @@
-// use std::str::{FromStr};
 use serde::{Deserialize, Serialize};
 use strum_macros::{Display, EnumString, EnumIter, EnumMessage};
 
+/// # Sound Enum
+///
+/// This module defines the `Sound` enum, representing various phonetic sounds.
+///
+/// ## Usage
+///
+/// ```rust
+/// use crate::sound::Sound; // Assuming the enum is defined in a module named "sound"
+///
+/// let sound = Sound::ShortA;
+/// println!("{}", sound); // Prints "ShortA"
+///
+///
+/// ## Features
+///
+/// - Serialization and deserialization using Serde.
+/// - String representation, iteration, and custom error messages using strum_macros.
+/// - Debug formatting for debugging.
+/// - Equality comparison and hashing for efficient use in collections.
+///
+/// ## Variants
+///
+/// The enum includes variants for various vowel and consonant sounds, as well as a silent variant.
+/// See the variant definitions below for details.
 #[derive(Debug, Display, EnumString, EnumIter, EnumMessage, Serialize, Deserialize, Clone, PartialEq, Eq, Hash)]
 pub enum Sound {
     #[strum(message = "ə")]
@@ -32,8 +55,7 @@ pub enum Sound {
     LongI,
     #[strum(message = "oʊ")]
     LongO,
-    // #[strum(message = "ɔ")]
-    #[strum(message = "ɑ")]
+    #[strum(message = "ɔ")]
     DotO,
     #[strum(message = "ɔɪ")]
     Oi,
