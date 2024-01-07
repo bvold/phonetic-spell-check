@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/yaml-test-7.iml" filepath="$PROJECT_DIR$/.idea/yaml-test-7.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/phonetic-spell-check.iml" filepath="$PROJECT_DIR$/.idea/phonetic-spell-check.iml" />
     </modules>
   </component>
 </project>
