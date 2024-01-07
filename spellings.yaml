@@ -176,6 +176,7 @@ spellings:
       - ShortE
       - LongE
       - ShortI
+      - Silent  # Handle the case of "Magic e"
   ea:
     sounds:
       - Schwa
@@ -193,6 +194,7 @@ spellings:
       - Schwa
       - UmlautA
       - LongO
+      - LongU
   ed:
     sounds:
       - D
@@ -253,6 +255,10 @@ spellings:
     sounds:
       - LongO
       - UmlautU
+      - LongU
+  ewe:
+    sounds:
+      - LongU
   ey:
     sounds:
       - LongA
@@ -407,9 +413,9 @@ spellings:
     sounds:
       - M
       - N
-  mp:
-    sounds:
-      - N
+#  mp:
+#    sounds:
+#      - N
   n:
     sounds:
       - N
@@ -464,7 +470,7 @@ spellings:
   olo:
     sounds:
       - R
-  'on':
+  on:
     sounds:
       - SchwaN
   oo:
@@ -540,6 +546,7 @@ spellings:
   r:
     sounds:
       - R
+      - SchwaR # acquire
   re:
     sounds:
       - SchwaR
@@ -573,6 +580,7 @@ spellings:
   se:
     sounds:
       - Sh
+      - Z
   sh:
     sounds:
       - Sh
@@ -593,9 +601,9 @@ spellings:
     sounds:
       - Sh
       - Zh
-  st:
-    sounds:
-      - S
+#  st:  # christmas, but for compost this doesn't work
+#    sounds:
+#      - S
   sth:
     sounds:
       - S
@@ -633,6 +641,7 @@ spellings:
       - AccentSchwa
       - ShortE
       - ShortI
+      - LongU
       - UmlautU
       - DotU
       - W

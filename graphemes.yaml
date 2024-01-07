@@ -90,7 +90,7 @@ graphemes:
   UmlautA: # fixme(umlaut)
     spellings:
       - a  # farther, father, guard
-      - e  # entree, sergeant(fixme)
+      - e  # entree, sergeant
       - i  # lingerie
       - o  # cot
       - aa # bazaar
@@ -227,6 +227,10 @@ graphemes:
       - eew # leeward(fixme)
       - ieu # lieutenant, lieu
       - oeu # manoeuvre
+  LongU:
+    spellings:
+      - u   # cute
+      - ew  # few
       - eau # beauty
       - ewe # ewe
       - eew # (u) peewit
@@ -354,7 +358,7 @@ graphemes:
       - gn # sign, gnat, reign
       - kn # knot
       - mn # mnemonic
-      - mp # (u) comptroller
+      #- mp # (u) comptroller
       - nn # banner
       - pn # pneumonia
   SchwaN:
@@ -390,7 +394,7 @@ graphemes:
       - ps # psalm
       - sc # fascinate, scissors
       - ss # mass
-      - st # listen, Christmas
+      - st # listen, Christmas - fixme, only in the middle of a word
       - ts # (u) tsar
       - tz # (u) tzar
       - sch # (u) schism
@@ -422,7 +426,7 @@ graphemes:
       - ct  # ctenoid
       - ed  # walked
       - pt  # ptomaine, receipt
-      - th  # thyme, Thomas, Thai
+      - th  # thyme, Thomas, Thai1G
       - tt  # button
       - cht # yacht
       - ght # night, straight
