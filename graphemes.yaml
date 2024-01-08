@@ -188,12 +188,13 @@ graphemes:
       - oe  # doe (fixme, o-e?)
       - oh  # oh, Noh
       - oo  # brooch
-      - ou  # boulder, though(fixme)
+      - ou  # boulder
       - ow  # know
       - ua  # quahog(fixme)
       - eau # plateau
       - NULL # burgh(u)
       - ewe # eye(u)
+      - ough # though
   DotO:
     spellings:
       - a  # ball, talk

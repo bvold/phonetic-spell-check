@@ -21,14 +21,14 @@ Phonetic Spell Check is a tool for performing spell checks with a focus on phone
 ### Installation
 
 ```bash
-$ cargo install phonetic-spell-check
+$ cargo install phonetic_spell_rs
 
 ```
 
 ### Usage
 
 ```bash
-$ phonetic-spell-check --input text.txt --dictionary custom_dict.txt
+$ phonetic_spell_rs --input text.txt --dictionary custom_dict.txt
 ```
 
 ### (TBD) Configuration
