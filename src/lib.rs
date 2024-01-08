@@ -237,30 +237,6 @@ pub fn get_possible_corrections(original_word: String) -> BTreeSet<String> {
     //     println!("Sounds: {:?}", spelling_data.sounds);
     // }
 
-    // let original_word = "laff";  // laugh
-    // let original_word = "ghoti";  // fish
-    // let original_word = "kumpoot";  // compute
-    // let original_word = "kumpliant";  // compliant
-    // let original_word = "kompost";  // compost
-    // let original_word = "kompose";  // compose
-    // let original_word = "ubowt";  // about
-    // let original_word = "kryteria";  // criteria
-    // let original_word = "krismas";  // Christmas
-    // let original_word = "won";  // one
-    // let original_word = "lite";  // light
-
-    // let original_word = "akwire";  // acquire
-    // let original_word = "bizar";    // bizarre
-    // let original_word = "semetary"; // cemetery
-    // let original_word = "definitely";
-    // let original_word = "ecstasy";
-    // let original_word = "foreign";
-    // let original_word = "gauge";
-    // let original_word = "harass";
-    // let original_word = "independent";
-    // let original_word = "jewelry";
-    // let original_word = "yon";
-
     let phoneme_array = phonemize(&deserialized_spellings, original_word.to_string());
 
     println!("{:?}", phoneme_array);
