@@ -39,14 +39,17 @@ spellings:
       - LongA
       - ShortE
       - LongI
-  ain:
-    sounds:
-      - SchwaM
-      - SchwaN
+#  ain:  // breaks too many things, and "ai" + "n" works for all the cases I know about
+#    sounds:
+#      - SchwaM
+#      - SchwaN
   al:
     sounds:
       - SchwaL
   ao:
+    sounds:
+      - LongO
+  aoh:  # pharaoh
     sounds:
       - LongO
   aou:
@@ -81,6 +84,7 @@ spellings:
   b:
     sounds:
       - B
+      - V
   bb:
     sounds:
       - B
@@ -110,9 +114,9 @@ spellings:
       - K
       - UnderlineK
       - Sh
-  chi:
-    sounds:
-      - Sh
+#  chi:
+#    sounds:
+#      - Sh
   chm:
     sounds:
       - M
@@ -216,13 +220,13 @@ spellings:
       - LongE
       - ShortI
       - LongI
-  el:
-    sounds:
-      - SchwaL
-  en:
-    sounds:
-      - SchwaM
-      - SchwaN
+#  el:        // not needed because "e" + "l" will automatically find SchwaL
+#    sounds:
+#      - SchwaL
+#  en:        // confuses words that start with enn, "en" will expand to e + n which covers both of these plus extra, "enny" -> "any"
+#    sounds:
+#      - SchwaM
+#      - SchwaN
   eo:
     sounds:
       - Schwa
@@ -230,16 +234,17 @@ spellings:
       - LongE
       - LongO
       - DotO
-  er:
-    sounds:
-      - SchwaR
-      - AccentSchwaR
+#  er:
+#    sounds:
+#      - SchwaR
+#      - AccentSchwaR
+#      - ShortA
   ernm:
     sounds:
       - SchwaM
-  err:
-    sounds:
-      - AccentSchwaR
+#  err:
+#    sounds:
+#      - AccentSchwaR
   et:
     sounds:
       - LongA
@@ -400,6 +405,7 @@ spellings:
   m:
     sounds:
       - M
+      - SchwaM
   mb:
     sounds:
       - M
@@ -479,6 +485,7 @@ spellings:
       - LongO
       - UmlautU
       - DotU
+      - LongU   # hoo
   or:
     sounds:
       - SchwaR
@@ -494,15 +501,16 @@ spellings:
       - UmlautU
       - DotU
       - W
-  our:
-    sounds:
-      - Schwa
-      - AccentSchwaR
+#  our:  # doesn't seem to be necessary
+#    sounds:
+#      - Schwa
+#      - AccentSchwaR
   ow:
     sounds:
       - Schwa
       - Au
       - DotO
+      - LongO
   oy:
     sounds:
       - LongI
@@ -589,6 +597,7 @@ spellings:
       - Ch
       - Sh
       - Zh
+      - S   # sir
   sk:
     sounds:
       - Sh
@@ -645,6 +654,7 @@ spellings:
       - UmlautU
       - DotU
       - W
+      - Yu   # bureaucrat
   ua:
     sounds:
       - LongO
@@ -692,7 +702,8 @@ spellings:
       - R
   x:
     sounds:
-      - Z
+      - Z  # Xerox
+      - X  # elixir
   y:
     sounds:
       - Schwa

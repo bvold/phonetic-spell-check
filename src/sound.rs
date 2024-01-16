@@ -1,5 +1,5 @@
 use serde::{Deserialize, Serialize};
-use strum_macros::{Display, EnumString, EnumIter, EnumMessage};
+use strum_macros::{Display, EnumIter, EnumMessage, EnumString};
 
 /// # Sound Enum
 ///
@@ -25,7 +25,19 @@ use strum_macros::{Display, EnumString, EnumIter, EnumMessage};
 //
 // The enum includes variants for various vowel and consonant sounds, as well as a silent variant.
 // See the variant definitions below for details.
-#[derive(Debug, Display, EnumString, EnumIter, EnumMessage, Serialize, Deserialize, Clone, PartialEq, Eq, Hash)]
+#[derive(
+    Debug,
+    Display,
+    EnumString,
+    EnumIter,
+    EnumMessage,
+    Serialize,
+    Deserialize,
+    Clone,
+    PartialEq,
+    Eq,
+    Hash,
+)]
 pub enum Sound {
     #[strum(message = "ə")]
     Schwa,
@@ -63,7 +75,7 @@ pub enum Sound {
     LongU,
     #[strum(message = "ju")]
     UmlautU,
-    #[strum(message = "u")]
+    #[strum(message = "ʊ")]
     DotU,
     #[strum(message = "b")]
     B,
@@ -117,12 +129,16 @@ pub enum Sound {
     V,
     #[strum(message = "w")]
     W,
+    #[strum(message = "ks")]
+    X,
     #[strum(message = "j")]
     Y,
+    #[strum(message = "jʊ")]
+    Yu,
     #[strum(message = "z")]
     Z,
     #[strum(message = "ʒ")]
     Zh,
     #[strum(message = "")]
-    Silent
+    Silent,
 }

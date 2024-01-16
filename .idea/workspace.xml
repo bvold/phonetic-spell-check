@@ -9,9 +9,15 @@
   <component name="ChangeListManager">
     <list default="true" id="a25c7d65-1d21-4241-8b2f-65c7cbb72c44" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cargo.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Cargo.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cargo.toml" beforeDir="false" afterPath="$PROJECT_DIR$/Cargo.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/en_US.txt" beforeDir="false" afterPath="$PROJECT_DIR$/en_US.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphemes.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/graphemes.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spellings.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/spellings.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/lib.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib.rs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/lib_test.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib_test.rs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sound.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/sound.rs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,9 +51,11 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;Cargo.Build phonetic_spell_rs.executor&quot;: &quot;Run&quot;,
     &quot;Cargo.Clean phonetic_spell_rs.executor&quot;: &quot;Run&quot;,
     &quot;Cargo.Run phonetic_spell_rs.executor&quot;: &quot;Run&quot;,
     &quot;Cargo.Test phonetic_spell_rs.executor&quot;: &quot;Run&quot;,
+    &quot;Cargo.test.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
@@ -70,10 +78,16 @@
   <component name="RsExternalLinterProjectSettings">
     <option name="runOnTheFly" value="true" />
   </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="cargo test" />
+    </option>
+  </component>
   <component name="RunManager" selected="Cargo.Test phonetic_spell_rs">
-    <configuration name="Clean phonetic_spell_rs" type="CargoCommandRunConfiguration" factoryName="Cargo Command">
-      <option name="command" value="clean" />
+    <configuration name="Build phonetic_spell_rs" type="CargoCommandRunConfiguration" factoryName="Cargo Command" temporary="true">
+      <option name="command" value="build --package phonetic_spell_rs --lib" />
       <option name="workingDirectory" value="file://$PROJECT_DIR$" />
+      <envs />
       <option name="emulateTerminal" value="true" />
       <option name="channel" value="DEFAULT" />
       <option name="requiredFeatures" value="true" />
@@ -81,14 +95,31 @@
       <option name="withSudo" value="false" />
       <option name="buildTarget" value="REMOTE" />
       <option name="backtrace" value="SHORT" />
+      <option name="isRedirectInput" value="false" />
+      <option name="redirectInputPath" value="" />
+      <method v="2">
+        <option name="CARGO.BUILD_TASK_PROVIDER" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Clean phonetic_spell_rs" type="CargoCommandRunConfiguration" factoryName="Cargo Command">
+      <option name="command" value="clean" />
+      <option name="workingDirectory" value="file://$PROJECT_DIR$" />
       <envs />
+      <option name="emulateTerminal" value="true" />
+      <option name="channel" value="DEFAULT" />
+      <option name="requiredFeatures" value="true" />
+      <option name="allFeatures" value="false" />
+      <option name="withSudo" value="false" />
+      <option name="buildTarget" value="REMOTE" />
+      <option name="backtrace" value="SHORT" />
       <option name="isRedirectInput" value="false" />
       <option name="redirectInputPath" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Run phonetic_spell_rs" type="CargoCommandRunConfiguration" factoryName="Cargo Command">
+    <configuration name="Run phonetic_spell_rs" type="CargoCommandRunConfiguration" factoryName="Cargo Command" temporary="true">
       <option name="command" value="run --package phonetic_spell_rs --bin phonetic_spell_rs" />
       <option name="workingDirectory" value="file://$PROJECT_DIR$" />
+      <envs />
       <option name="emulateTerminal" value="true" />
       <option name="channel" value="DEFAULT" />
       <option name="requiredFeatures" value="true" />
@@ -96,7 +127,6 @@
       <option name="withSudo" value="false" />
       <option name="buildTarget" value="REMOTE" />
       <option name="backtrace" value="SHORT" />
-      <envs />
       <option name="isRedirectInput" value="false" />
       <option name="redirectInputPath" value="" />
       <method v="2">
@@ -104,8 +134,9 @@
       </method>
     </configuration>
     <configuration name="Test phonetic_spell_rs" type="CargoCommandRunConfiguration" factoryName="Cargo Command">
-      <option name="command" value="test --workspace" />
+      <option name="command" value="test --workspace --lib" />
       <option name="workingDirectory" value="file://$PROJECT_DIR$" />
+      <envs />
       <option name="emulateTerminal" value="true" />
       <option name="channel" value="DEFAULT" />
       <option name="requiredFeatures" value="true" />
@@ -113,7 +144,21 @@
       <option name="withSudo" value="false" />
       <option name="buildTarget" value="REMOTE" />
       <option name="backtrace" value="SHORT" />
+      <option name="isRedirectInput" value="false" />
+      <option name="redirectInputPath" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="test" type="CargoCommandRunConfiguration" factoryName="Cargo Command" temporary="true">
+      <option name="command" value="test" />
+      <option name="workingDirectory" value="file://$PROJECT_DIR$" />
       <envs />
+      <option name="emulateTerminal" value="true" />
+      <option name="channel" value="DEFAULT" />
+      <option name="requiredFeatures" value="true" />
+      <option name="allFeatures" value="false" />
+      <option name="withSudo" value="false" />
+      <option name="buildTarget" value="REMOTE" />
+      <option name="backtrace" value="SHORT" />
       <option name="isRedirectInput" value="false" />
       <option name="redirectInputPath" value="" />
       <method v="2">
@@ -121,15 +166,28 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Cargo.Run phonetic_spell_rs" />
       <item itemvalue="Cargo.Clean phonetic_spell_rs" />
       <item itemvalue="Cargo.Test phonetic_spell_rs" />
+      <item itemvalue="Cargo.test" />
+      <item itemvalue="Cargo.Build phonetic_spell_rs" />
+      <item itemvalue="Cargo.Run phonetic_spell_rs" />
     </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Cargo.test" />
+        <item itemvalue="Cargo.Run phonetic_spell_rs" />
+        <item itemvalue="Cargo.Build phonetic_spell_rs" />
+        <item itemvalue="Cargo.Build phonetic_spell_rs" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="RustProjectSettings">
     <option name="toolchainHomeDirectory" value="$USER_HOME$/.cargo/bin" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration>$USER_HOME$/.subversion</configuration>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="a25c7d65-1d21-4241-8b2f-65c7cbb72c44" name="Changes" comment="" />
@@ -138,7 +196,15 @@
       <option name="presentableId" value="Default" />
       <updated>1704669202004</updated>
       <workItem from="1704669203331" duration="6586000" />
-      <workItem from="1704676210045" duration="1586000" />
+      <workItem from="1704676210045" duration="2312000" />
+      <workItem from="1704838373724" duration="13071000" />
+      <workItem from="1704898448171" duration="1935000" />
+      <workItem from="1705067661196" duration="805000" />
+      <workItem from="1705159501100" duration="17495000" />
+      <workItem from="1705357813786" duration="878000" />
+      <workItem from="1705358702760" duration="4379000" />
+      <workItem from="1705363101419" duration="2051000" />
+      <workItem from="1705414101291" duration="5115000" />
     </task>
     <servers />
   </component>

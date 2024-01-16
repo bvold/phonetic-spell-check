@@ -1,13 +1,13 @@
+use crate::sound::Sound;
+use lazy_static::lazy_static;
+use serde::{Deserialize, Serialize};
 use std::collections::{BTreeMap, BTreeSet, HashMap, HashSet};
 use std::fs::File;
 use std::io::{BufRead, BufReader, Read};
-use lazy_static::lazy_static;
-use serde::{Deserialize, Serialize};
 use strum::EnumMessage;
-use crate::sound::Sound;
 
-mod sound;
 mod lib_test;
+mod sound;
 
 #[derive(Debug, Serialize, Deserialize)]
 struct Spelling {
@@ -63,7 +63,12 @@ fn gen_ipa_word_permutations(btreemap: &BTreeMap<usize, Vec<Sound>>) -> Vec<Stri
         }
     }
 
-    build_ipa_permutations("", btreemap.keys().collect::<Vec<_>>().as_slice(), btreemap, &mut permutations);
+    build_ipa_permutations(
+        "",
+        btreemap.keys().collect::<Vec<_>>().as_slice(),
+        btreemap,
+        &mut permutations,
+    );
 
     permutations
 }
@@ -93,26 +98,6 @@ let pronunciation = ipa[i].replace(['/', '\'', 'ˈ','ˌ',','], "");
         cmu_dict
     };
 }
-
-// lazy_static! {
-//     static ref USR_SHARE_DICT_WORDS_HASHSET: Result<HashSet<String>, std::io::Error> = {
-//         let file_contents = std::fs::read_to_string("/usr/share/dict/words")?;
-//         let words = file_contents
-//             .lines()
-//             .map(|line| line.to_lowercase())
-//             .collect();
-//
-//         Ok(words)
-//     };
-// }
-// match dictionary {
-// Ok(words) => {
-// // Use the `words` HashSet here
-// },
-// Err(err) => {
-// // Handle the error gracefully
-// }
-// }
 
 lazy_static! {
     static ref USR_SHARE_DICT_WORDS_HASHSET: HashSet<String> = {
@@ -144,7 +129,9 @@ fn phonemize(deserialized_spellings: &Spellings, original_word: String) -> Vec<S
 
     while offset + size < size_of_original_word {
         // Find the longest matching diphthong
-        while offset + size + 1 <= size_of_original_word && key_map.contains_key(&original_word[offset..(offset + size + 1)]) {
+        while offset + size + 1 <= size_of_original_word
+            && key_map.contains_key(&original_word[offset..(offset + size + 1)])
+        {
             size += 1;
         }
 
@@ -157,7 +144,12 @@ fn phonemize(deserialized_spellings: &Spellings, original_word: String) -> Vec<S
 }
 
 // A recursive function that generates permutations of phoneme combinations after initial phoneme parse
-fn gen_phoneme_permutations(original: &Vec<String>, current: Vec<String>, index: usize, result: &mut HashSet<Vec<String>>) {
+fn gen_phoneme_permutations(
+    original: &Vec<String>,
+    current: Vec<String>,
+    index: usize,
+    result: &mut HashSet<Vec<String>>,
+) {
     if index == original.len() {
         result.insert(current.clone());
         return;
@@ -178,7 +170,7 @@ fn gen_phoneme_permutations(original: &Vec<String>, current: Vec<String>, index:
 }
 
 fn read_spellings_yaml() -> Option<String> {
-// Specify the path to the YAML file
+    // Specify the path to the YAML file
     let file_path = "spellings.yaml";
 
     // Read the YAML file content into a string
@@ -206,7 +198,6 @@ fn read_spellings_yaml() -> Option<String> {
 //     };
 //     Some(yaml_string)
 // }
-
 
 // fn add_unique_strings(data: &mut HashMap<usize, Vec<String>>, index: usize, new_strings: Vec<String>) {
 //     for s in new_strings {
@@ -243,7 +234,7 @@ pub fn get_possible_corrections(original_word: String) -> BTreeSet<String> {
 
     let mut parsings_array_set: HashSet<Vec<String>> = HashSet::new();
 
-    gen_phoneme_permutations(&phoneme_array, Vec::new(), 0, &mut parsings_array_set);
+    gen_phoneme_permutations(&phoneme_array, Vec::new(), 0, &mut parsings_array_set);  // FIXME - only create the permutations if words not found for first parse, save time, more efficient
 
     println!("{:?}", parsings_array_set);
 
@@ -254,12 +245,20 @@ pub fn get_possible_corrections(original_word: String) -> BTreeSet<String> {
     for parse in parsings_array {
         let mut sounds_array: BTreeMap<usize, Vec<Sound>> = BTreeMap::new();
 
-        // Add the sounds from each parse array
+        // Add the sounds from each parse in the array
         for (i, phoneme) in parse.iter().enumerate() {
-            sounds_array.insert(i, deserialized_spellings.spellings.get(phoneme).as_ref().map(|spelling| spelling.sounds.clone()).unwrap());
+            sounds_array.insert(
+                i,
+                deserialized_spellings
+                    .spellings
+                    .get(phoneme)
+                    .as_ref()
+                    .map(|spelling| spelling.sounds.clone())
+                    .unwrap(),
+            );
         }
 
-        println!("sounds_array len {:?}", sounds_array.len());
+        // println!("sounds_array len {:?}", sounds_array.len());
         println!("sounds_array {:?}", sounds_array);
 
         for sound in sounds_array.iter() {
@@ -273,11 +272,16 @@ pub fn get_possible_corrections(original_word: String) -> BTreeSet<String> {
         word_spelling_permutations.sort();
         word_spelling_permutations.dedup();
 
-        println!("{} permutations {:?}", word_spelling_permutations.len(), word_spelling_permutations);
+        println!(
+            "{} permutations {:?}",
+            word_spelling_permutations.len(),
+            word_spelling_permutations
+        );
 
         for ipa_char_word in word_spelling_permutations {
             // if word is in CMU Pronunciation dict, add the words that collate there to list of corrections
-            let word_vector: Option<&Vec<String>> = IPA_TO_DICT_WORD_MAP.get(ipa_char_word.as_str());
+            let word_vector: Option<&Vec<String>> =
+                IPA_TO_DICT_WORD_MAP.get(ipa_char_word.as_str());
 
             match word_vector {
                 Some(words) => {
@@ -287,11 +291,13 @@ pub fn get_possible_corrections(original_word: String) -> BTreeSet<String> {
                             possible_corrections.insert(word.to_string());
                         }
                     }
-                },
-                None => {},
+                }
+                None => {}
             };
         }
     }
+
+    println!("{:?}", possible_corrections);
 
     possible_corrections
 }

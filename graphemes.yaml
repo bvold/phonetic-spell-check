@@ -366,7 +366,7 @@ graphemes:
     spellings:
       - en # sudden
       - on # cotton
-      - ain # certain
+#      - ain # certain
   Ng:
     spellings:
       - n  # ink, finger, orangutan
