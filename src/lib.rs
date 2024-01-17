@@ -101,7 +101,7 @@ let pronunciation = ipa[i].replace(['/', '\'', 'ˈ','ˌ',','], "");
 
 lazy_static! {
     static ref USR_SHARE_DICT_WORDS_HASHSET: HashSet<String> = {
-        let file = File::open("/usr/share/dict/words").unwrap();
+        let file = File::open("words").unwrap();
         let reader = BufReader::new(file);
 
         let mut words = HashSet::new();

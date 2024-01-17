@@ -451,6 +451,7 @@ spellings:
       - DotO
       - UmlautU
       - DotU
+      - LongU
   oa:
     sounds:
       - Schwa
@@ -555,9 +556,9 @@ spellings:
     sounds:
       - R
       - SchwaR # acquire
-  re:
-    sounds:
-      - SchwaR
+#  re:
+#    sounds:
+#      - SchwaR
   rh:
     sounds:
       - R
@@ -622,9 +623,9 @@ spellings:
   tch:
     sounds:
       - Ch
-  te:
-    sounds:
-      - Ch
+#  te:
+#    sounds:
+#      - Ch
   th:
     sounds:
       - T

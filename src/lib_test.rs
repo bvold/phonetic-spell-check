@@ -348,7 +348,7 @@ use std::time::Duration;
 #[case::hoo("hoo", "who")]
 // Hw
 #[case::hwon("hwon", "juan")]
-// #[case::mariwana("mariwana", "marijuana")]  // FIXME test terminated
+#[case::mariwana("mariwana", "marijuana")]  // FIXME test terminated
 #[case::hwale("hwale", "whale")]
 #[case::hwen("hwhen", "when")]
 // J
@@ -521,11 +521,136 @@ use std::time::Duration;
 // #[case::thonic("thonic", "chthonic")]   // Not in CMU, not in /usr/share/dict/words
 // #[case::thaline("thaline", "phthalein")]  // Not in CMU, not in /usr/share/dict/words
 // UnderlineTh
-#[case::istethfod("istethfod", "eisteddfod")]
-#[case::eth("eth", "edh")]
+// #[case::istethfod("istethfod", "eisteddfod")]  // Not in CMU, not in /usr/share/dict/words
+// #[case::eth("eth", "edh")]  // Not in CMU, not in /usr/share/dict/words
 #[case::this("this", "this")]
-#[case::tething("teething", "teething")]
+#[case::teething("teething", "teething")]
 #[case::breath("breath", "breathe")]
+// V
+#[case::uv("uv", "of")]
+#[case::vary("vary", "very")]
+#[case::sav("sav", "save")]
+// #[case::vadeln("vadeln", "wedeln")]  // Not in CMU, not in /usr/share/dict/words
+#[case::steven("steven", "stephen")]
+#[case::savy("savy", "savvy")]
+// W
+#[case::perswade("perswade", "persuade")]
+#[case::kwit("kwit", "quit")]
+#[case::wa("wa", "way")]
+#[case::won("won", "juan")]
+#[case::mariwona("mariwona", "marijuana")]
+// #[case::wabain("wabain", "ouabain")]   // Not in CMU, not in /usr/share/dict/words
+#[case::bivwak("bivwak", "bivouac")]
+#[case::wale("wale", "whale")]
+#[case::wen("wen", "when")]
+#[case::wun("wun", "one")]
+#[case::kwir("kwir", "choir")]
+#[case::patwa("patwa", "patois")]
+#[case::strenwus("strenwus", "strenuous")]
+// Y
+#[case::opinyun("opinyun", "opinion")]
+// #[case::haleluya("haleluya", "hallelujah")]  // IDE terminates test
+#[case::yard("yard", "yard")]
+#[case::byuty("byuty", "beauty")]
+// #[case::canyon("canyon", "cañon")]  // Not in CMU, not in /usr/share/dict/words because it's Spanish
+#[case::cyut("cyut", "cute")]
+#[case::fyud("fyud", "feud")]
+#[case::fyu("fyu", "few")]
+// #[case::strenyawus("strenyawus", "strenuous")]  // IDE terminates test
+// #[case::tortiya("tortiya", "tortilla")] // This pronunciation is not in CMU, /tɔɹˈtiə/
+#[case::yunit("yunit", "unit")]
+// Z
+#[case::daz("daz", "days")]
+#[case::wuz("wuz", "was")]
+#[case::pleez("pleez", "please")]
+#[case::zylofon("zylofon", "xylophone")]
+// #[case::batoz("batoz", "bateaux")]  // Not in CMU, not in /usr/share/dict/words
+#[case::zon("zon", "zone")]
+#[case::zar("haz", "haze")]
+#[case::zon("zar", "czar")]
+#[case::dizern("dizern", "discern")]
+#[case::sizors("sizors", "scissors")]
+#[case::zar("zar", "tsar")]
+// #[case::zar("zar", "tzar")]  // This pronunciation is not in CMU
+#[case::buz("buz", "buzz")]
+#[case::igzampl("igzampl", "example")]
+// Zh
+// #[case::fizin("fizin", "fission")]  // This pronunciation is not in CMU, /ˈfɪʃən/
+#[case::azer("azer", "azure")]
+#[case::mezer("mezer", "measure")]
+// Silent
+#[case::com("com", "comb")]  // b
+#[case::det("det", "debt")]  // b
+#[case::konetikut("konetikut", "connecticut")]  // c
+// #[case::stenoid("stenoid", "ctenoid")]     // Not in CMU, in /usr/share/dict/words
+#[case::yot("yot", "yacht")]  // ch
+// #[case::thonic("thonic", "chthonic")] // ch   // Not in CMU, not in /usr/share/dict/words
+#[case::dat("dat", "date")]  // e
+#[case::liv("liv", "live")]  // e
+#[case::battl("battl", "battle")]  // e
+#[case::seemd("seemd", "seemed")]  // e
+#[case::plag("plag", "plague")]  // e
+#[case::nat("nat", "gnat")]  // g
+#[case::sin("sin", "sign")]  // g
+#[case::diafram("diafram", "diaphragm")]  // g
+#[case::nit("nit", "night")]  // gh
+#[case::strat("strat", "straight")]  // gh
+#[case::tho("tho", "though")]  // gh
+#[case::thot("thot", "thought")]  // gh
+#[case::ower("ower", "hour")]  // h
+#[case::onor("onor", "honor")]  // h
+#[case::rim("rim", "rhyme")]  // h
+// #[case::tim("tim", "thyme")] // h  // This pronunciation is not in CMU, but this is actually the preferred pronunciation
+#[case::biznis("biznis", "business")]  // i
+#[case::parlament("parlament", "parliament")]  // i
+#[case::not("not", "knot")]  // k
+#[case::no("no", "know")]  // k
+#[case::tok("tok", "talk")]  // l
+#[case::fok("fok", "folk")]  // l
+#[case::wood("wood", "would")]  // l
+#[case::com("com", "calm")]  // l
+#[case::nemonic("nemonic", "mnemonic")]  // m
+#[case::otum("otum", "autumn")]  // n
+#[case::goverment("goverment", "government")]  // n
+// #[case::kil("kil", "kiln")]  // n   // This pronunciation is not in CMU
+#[case::sofmor("sofmor", "sophomore")]  // o
+// #[case::posum("posum", "opossum")]  // l  // Treated as separate words in CMU and /usr/share/dict/words
+#[case::cubard("cubard", "cupboard")]  // p
+#[case::numonia("numonia", "pneumonia")]  // p
+#[case::salm("salm", "psalm")]  // p
+#[case::tomain("tomain", "ptomaine")]  // p
+#[case::razbery("razbery", "raspberry")]  // p
+// #[case::thaline("thaline", "phthalein")] // ph // Not in CMU, not in /usr/share/dict/words
+// #[case::tizik("tizik", "phthisic")]   // ph  // Not in CMU, not in /usr/share/dict/words
+#[case::supriz("supriz", "surprise")]  // r
+#[case::il("il", "aisle")]  // s
+#[case::iland("iland", "island")]  // s
+#[case::patwa("patwa", "patois")]  // s
+#[case::daman("daman", "demesne")]  // s
+// #[case::bera("bera", "beret")]  // t   // CMU has incorrect pronunciation
+// #[case::bosun("bosun", "boatswain")]  // t  // CMU has incorrect pronunciation
+#[case::chrismas("chrismas", "christmas")]  // t
+#[case::depo("depo", "depot")]  // t
+#[case::lisen("lisen", "listen")]  // t
+#[case::azma("azma", "asthma")]  // th
+#[case::izmus("izmus", "isthmus")]  // th
+// #[case::norester("norester", "northeaster")]  // th  // not in CMU, is in /usr/share/dict/words
+#[case::bizkit("bizkit", "biscuit")]  // l
+#[case::bild("bild", "build")]  // u
+#[case::gest("gest", "guest")]  // l
+// #[case::pursivant("pursivant", "pursuivant")]  // u  // not in CMU, not in /usr/share/dict/words
+#[case::qay("qay", "quay")]  // u
+#[case::plag("plag", "plague")]  // u
+#[case::plaq("plaq", "plaque")]  // u
+#[case::hu("hu", "who")]  // l
+#[case::rit("rit", "write")]  // l
+#[case::to("to", "two")]  // w
+#[case::sord("sord", "sword")]  // w
+// #[case::bosun("bosun", "boatswain")]  // w  // In CMU with incorrect pronunciation
+// #[case::fo("fo", "faux")]  // x   // In CMU with incorrect pronunciation, not in /usr/share/dict/words
+// #[case::batoz("batoz", "bateaux")]  // Not in CMU, not in /usr/share/dict/words
+// #[case::est("est", "yeast")]  // y   // CMU doesn't have this pronuncication and it's uncommon - and none of the dicts have this pronunciation
+#[case::rondavu("rondavu", "rendezvous")]  // z
 pub fn test_phonetic_spell_check(#[case] original_word: &str, #[case] expected_correction: &str) {
     let possible_corrections = get_possible_corrections(original_word.to_string());
     assert!(possible_corrections.contains(expected_correction));
