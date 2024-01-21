@@ -16,3 +16,6 @@ trie-rs = "0.1.1"
 hashbrown = { version = "0.14.3", features = [] }
 edit-distance = { version = "2.1.0", features = [] }
 rstest = { version = "0.18.2" }
+
+[profile.release]
+debug = 1

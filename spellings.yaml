@@ -31,6 +31,7 @@ spellings:
     sounds:
       - Schwa
       - UmlautA
+      - UmlautAandH
       - DotO
   ai:
     sounds:
@@ -46,9 +47,13 @@ spellings:
   al:
     sounds:
       - SchwaL
+      - LongAandL
+      - DotAandL
+      - ShortAandL
   ao:
     sounds:
       - LongO
+      - LongAandDotA
   aoh:  # pharaoh
     sounds:
       - LongO
@@ -59,6 +64,9 @@ spellings:
     sounds:
       - SchwaR
       - DotA
+      - ShortAandR
+      - LongAandR
+      - DotOandR
   au:
     sounds:
       - LongA
@@ -144,9 +152,12 @@ spellings:
   ct:
     sounds:
       - T
+      - KandT
   cu:
     sounds:
       - K
+      - KandUmlautU
+      - KandSchwa
   cz:
     sounds:
       - Ch
@@ -165,9 +176,9 @@ spellings:
     sounds:
       - D
       - UnderlineTh
-  di:
-    sounds:
-      - J
+#  di:
+#    sounds:
+#      - J
   dj:
     sounds:
       - J
@@ -203,6 +214,8 @@ spellings:
     sounds:
       - D
       - T
+      - ShortEandD
+      - LongEandD
   ee:
     sounds:
       - LongA
@@ -239,15 +252,16 @@ spellings:
 #      - SchwaR
 #      - AccentSchwaR
 #      - ShortA
+#      - LongEandR
   ernm:
     sounds:
       - SchwaM
 #  err:
 #    sounds:
 #      - AccentSchwaR
-  et:
-    sounds:
-      - LongA
+#  et:
+#    sounds:
+#      - LongA
   eu:
     sounds:
       - Oi
@@ -302,6 +316,11 @@ spellings:
   gi:
     sounds:
       - J
+      - JandShortI
+      - GandLongI
+  gia:
+    sounds:
+      - JandShortI
   gm:
     sounds:
       - M
@@ -325,10 +344,10 @@ spellings:
       - ShortI
       - LongI
       - Y
-  ia:
-    sounds:
-      - Schwa
-      - ShortI
+#  ia:
+#    sounds:
+#      - Schwa
+#      - ShortI
   ie:
     sounds:
       - LongA
@@ -342,10 +361,14 @@ spellings:
   io:
     sounds:
       - Schwa
+      - LongIandLongO
   ir:
     sounds:
       - SchwaR
       - AccentSchwaR
+      - LongIandR
+      - ShortIandR
+      - LongEandR
   irr:
     sounds:
       - AccentSchwaR
@@ -362,6 +385,8 @@ spellings:
       - Hw
       - V
       - W
+      - JandSchwa
+      - JandLongU
   k:
     sounds:
       - K
@@ -381,12 +406,17 @@ spellings:
   ld:
     sounds:
       - D
+      - LandD
   le:
     sounds:
       - SchwaL
+      - LandLongE
+      - LandSchwa
+      - LandShortE
   lf:
     sounds:
       - F
+      - LandF
   lh:
     sounds:
       - L
@@ -426,12 +456,13 @@ spellings:
     sounds:
       - N
       - Ng
-  nd:
-    sounds:
-      - Ng
+#  nd:
+#    sounds:
+#      - Ng
   ng:
     sounds:
       - Ng
+      - NgandG
   ngg:
     sounds:
       - Ng
@@ -470,16 +501,16 @@ spellings:
   oh:
     sounds:
       - LongO
-  Oi:
+  oi:
     sounds:
       - Schwa
       - Oi
   olo:
     sounds:
       - R
-  on:
-    sounds:
-      - SchwaN
+#  on:
+#    sounds:
+#      - SchwaN
   oo:
     sounds:
       - AccentSchwa
@@ -491,6 +522,7 @@ spellings:
     sounds:
       - SchwaR
       - AccentSchwaR
+      - DotOandR
   ou:
     sounds:
       - Schwa
@@ -512,6 +544,7 @@ spellings:
       - Au
       - DotO
       - LongO
+      - SchwaAndW
   oy:
     sounds:
       - LongI
@@ -546,12 +579,14 @@ spellings:
   pt:
     sounds:
       - T
+      - PandT
   q:
     sounds:
       - K
   qu:
     sounds:
       - K
+      - KandW
   r:
     sounds:
       - R
@@ -586,22 +621,23 @@ spellings:
   sci:
     sounds:
       - Sh
-  se:
-    sounds:
-      - Sh
-      - Z
+#  se:
+#    sounds:
+#      - Sh
+#      - Z
   sh:
     sounds:
       - Sh
-  si:
-    sounds:
-      - Ch
-      - Sh
-      - Zh
-      - S   # sir
+#  si:
+#    sounds:
+#      - Ch
+#      - Sh
+#      - Zh
+#      - S   # sir
   sk:
     sounds:
       - Sh
+      - SandK
   ss:
     sounds:
       - S
@@ -635,9 +671,13 @@ spellings:
     sounds:
       - Ch
       - Sh
+      - TandShortI
+      - TandLongI
+      - TandSchwa
   ts:
     sounds:
       - Z
+      - TandZ
   tt:
     sounds:
       - T
@@ -675,12 +715,15 @@ spellings:
     sounds:
       - SchwaR
       - AccentSchwaR
+      - DotUandR
+      - UmlautUandR
   urr:
     sounds:
       - AccentSchwaR
   uy:
     sounds:
       - LongI
+      - LongUandY
   v:
     sounds:
       - B
@@ -716,6 +759,7 @@ spellings:
   yl:
     sounds:
       - SchwaL
+      - LongIandL
   yr:
     sounds:
       - SchwaR

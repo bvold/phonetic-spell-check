@@ -234,7 +234,8 @@ pub fn get_possible_corrections(original_word: String) -> BTreeSet<String> {
 
     let mut parsings_array_set: HashSet<Vec<String>> = HashSet::new();
 
-    gen_phoneme_permutations(&phoneme_array, Vec::new(), 0, &mut parsings_array_set);  // FIXME - only create the permutations if words not found for first parse, save time, more efficient
+    parsings_array_set.insert(phoneme_array);
+    //gen_phoneme_permutations(&phoneme_array, Vec::new(), 0, &mut parsings_array_set);  // FIXME - only create the permutations if words not found for first parse, save time, more efficient
 
     println!("{:?}", parsings_array_set);
 
