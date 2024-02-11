@@ -1,20 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="AutoImportSettings">
-    <option name="autoReloadType" value="SELECTIVE" />
+    <option name="autoReloadType" value="ALL" />
   </component>
   <component name="CargoProjects">
     <cargoProject FILE="$PROJECT_DIR$/Cargo.toml" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a25c7d65-1d21-4241-8b2f-65c7cbb72c44" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/benches/bench_phonemize_btreemap.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/phonetic_spell_rs.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/phonetic_spell_rs.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cargo.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Cargo.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Cargo.toml" beforeDir="false" afterPath="$PROJECT_DIR$/Cargo.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spellings.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/spellings.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/lib.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib.rs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/lib_test.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib_test.rs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sound.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/sound.rs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,28 +47,35 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Cargo.Build phonetic_spell_rs.executor": "Run",
-    "Cargo.Clean phonetic_spell_rs.executor": "Run",
-    "Cargo.Run phonetic_spell_rs.executor": "Run",
-    "Cargo.Test phonetic_spell_rs.executor": "Run",
-    "Cargo.test.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "remove__extra__parses",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/bryan_vold/RustroverProjects/phonetic_spell_rs",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "org.rust.cargo.project.model.PROJECT_DISCOVERY": "true",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Cargo.Bench phonetic_spell_rs.executor&quot;: &quot;Run&quot;,
+    &quot;Cargo.Build `Test phonetic_spell_rs`.executor&quot;: &quot;Run&quot;,
+    &quot;Cargo.Build phonetic_spell_rs.executor&quot;: &quot;Run&quot;,
+    &quot;Cargo.Clean phonetic_spell_rs.executor&quot;: &quot;Run&quot;,
+    &quot;Cargo.Install grcov.executor&quot;: &quot;Run&quot;,
+    &quot;Cargo.Run phonetic_spell_rs.executor&quot;: &quot;Run&quot;,
+    &quot;Cargo.Test lib::tests.executor&quot;: &quot;Run&quot;,
+    &quot;Cargo.Test phonetic_spell_rs.executor&quot;: &quot;Run&quot;,
+    &quot;Cargo.Test tests::prioritizes_longer_diphthongs.executor&quot;: &quot;Run&quot;,
+    &quot;Cargo.test.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.rust.reset.selective.auto.import&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;bench__phonemize&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/bryan_vold/RustroverProjects/daachorse-test-1&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;org.rust.cargo.project.model.PROJECT_DISCOVERY&quot;: &quot;true&quot;,
+    &quot;org.rust.cargo.project.model.impl.CargoExternalSystemProjectAware.subscribe.first.balloon&quot;: &quot;&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;dynamic.analysis.tools.clion.profiler&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
@@ -81,7 +89,24 @@
       <command value="cargo test" />
     </option>
   </component>
-  <component name="RunManager" selected="Cargo.Test phonetic_spell_rs">
+  <component name="RunManager" selected="Cargo.Run phonetic_spell_rs">
+    <configuration name="Bench phonetic_spell_rs" type="CargoCommandRunConfiguration" factoryName="Cargo Command">
+      <option name="command" value="bench" />
+      <option name="workingDirectory" value="file://$PROJECT_DIR$" />
+      <envs />
+      <option name="emulateTerminal" value="true" />
+      <option name="channel" value="DEFAULT" />
+      <option name="requiredFeatures" value="true" />
+      <option name="allFeatures" value="false" />
+      <option name="withSudo" value="false" />
+      <option name="buildTarget" value="REMOTE" />
+      <option name="backtrace" value="SHORT" />
+      <option name="isRedirectInput" value="false" />
+      <option name="redirectInputPath" value="" />
+      <method v="2">
+        <option name="CARGO.BUILD_TASK_PROVIDER" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Build phonetic_spell_rs" type="CargoCommandRunConfiguration" factoryName="Cargo Command" temporary="true">
       <option name="command" value="build --package phonetic_spell_rs --lib" />
       <option name="workingDirectory" value="file://$PROJECT_DIR$" />
@@ -148,6 +173,23 @@
         <option name="CARGO.BUILD_TASK_PROVIDER" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Test lib::tests" type="CargoCommandRunConfiguration" factoryName="Cargo Command" temporary="true">
+      <option name="command" value="test --package phonetic_spell_rs --lib tests" />
+      <option name="workingDirectory" value="file://$PROJECT_DIR$" />
+      <envs />
+      <option name="emulateTerminal" value="true" />
+      <option name="channel" value="DEFAULT" />
+      <option name="requiredFeatures" value="true" />
+      <option name="allFeatures" value="false" />
+      <option name="withSudo" value="false" />
+      <option name="buildTarget" value="REMOTE" />
+      <option name="backtrace" value="SHORT" />
+      <option name="isRedirectInput" value="false" />
+      <option name="redirectInputPath" value="" />
+      <method v="2">
+        <option name="CARGO.BUILD_TASK_PROVIDER" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Test phonetic_spell_rs" type="CargoCommandRunConfiguration" factoryName="Cargo Command">
       <option name="command" value="test --workspace" />
       <option name="workingDirectory" value="file://$PROJECT_DIR$" />
@@ -162,6 +204,23 @@
       <option name="isRedirectInput" value="false" />
       <option name="redirectInputPath" value="" />
       <method v="2" />
+    </configuration>
+    <configuration name="Test tests::prioritizes_longer_diphthongs" type="CargoCommandRunConfiguration" factoryName="Cargo Command" temporary="true">
+      <option name="command" value="test --package phonetic_spell_rs --lib tests::prioritizes_longer_diphthongs -- --exact" />
+      <option name="workingDirectory" value="file://$PROJECT_DIR$" />
+      <envs />
+      <option name="emulateTerminal" value="true" />
+      <option name="channel" value="DEFAULT" />
+      <option name="requiredFeatures" value="true" />
+      <option name="allFeatures" value="false" />
+      <option name="withSudo" value="false" />
+      <option name="buildTarget" value="REMOTE" />
+      <option name="backtrace" value="SHORT" />
+      <option name="isRedirectInput" value="false" />
+      <option name="redirectInputPath" value="" />
+      <method v="2">
+        <option name="CARGO.BUILD_TASK_PROVIDER" enabled="true" />
+      </method>
     </configuration>
     <configuration name="test" type="CargoCommandRunConfiguration" factoryName="Cargo Command" temporary="true">
       <option name="command" value="test" />
@@ -180,17 +239,10 @@
         <option name="CARGO.BUILD_TASK_PROVIDER" enabled="true" />
       </method>
     </configuration>
-    <list>
-      <item itemvalue="Cargo.Clean phonetic_spell_rs" />
-      <item itemvalue="Cargo.Test phonetic_spell_rs" />
-      <item itemvalue="Cargo.Release phonetic_spell_rs" />
-      <item itemvalue="Cargo.Build phonetic_spell_rs" />
-      <item itemvalue="Cargo.Run phonetic_spell_rs" />
-      <item itemvalue="Cargo.test" />
-    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Cargo.Run phonetic_spell_rs" />
+        <item itemvalue="Cargo.Test lib::tests" />
       </list>
     </recent_temporary>
   </component>
@@ -226,7 +278,11 @@
       <workItem from="1705585984690" duration="1330000" />
       <workItem from="1705597312426" duration="317000" />
       <workItem from="1705618648137" duration="3238000" />
-      <workItem from="1705702413864" duration="11693000" />
+      <workItem from="1705702413864" duration="13526000" />
+      <workItem from="1705883072256" duration="5841000" />
+      <workItem from="1707606601786" duration="5402000" />
+      <workItem from="1707687528829" duration="2914000" />
+      <workItem from="1707692594259" duration="380000" />
     </task>
     <servers />
   </component>
@@ -236,5 +292,8 @@
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
     <select />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/phonetic_spell_rs$Run_phonetic_spell_rs.info" NAME="Run phonetic_spell_rs Coverage Results" MODIFIED="1705883781688" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="RsCoverageRunner" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" CONTEXT_FILE_PATH="$PROJECT_DIR$" />
   </component>
 </project>

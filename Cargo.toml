@@ -8,14 +8,18 @@ edition = "2021"
 [dependencies]
 serde = { version = "1.0.195", features = ["derive"] }
 serde_yaml = "0.9.30"
-strum = { version = "0.25.0", features = [] }
-strum_macros = "0.25.3"
+strum = { version = "0.26.1", features = [] }
+strum_macros = "0.26.1"
 lazy_static = { version = "1.4.0", features = [] }
 ternary-tree = "0.1.1"
 trie-rs = "0.1.1"
 hashbrown = { version = "0.14.3", features = [] }
 edit-distance = { version = "2.1.0", features = [] }
 rstest = { version = "0.18.2" }
+criterion = "0.5.1"
+flexi_logger = "0.27.4"
+log = "0.4.20"
+daachorse = "1.0.0"
 
 [profile.release]
 debug = 1

@@ -3,9 +3,9 @@ use rstest::*;
 use std::time::Duration;
 
 #[rstest]
-#[case::laff("laff", "laugh")]
-#[case::fone("fone", "phone")]
-#[case::tonite("tonite", "tonight")]
+#[case::laff_laugh("laff", "laugh")]
+#[case::fone_phone("fone", "phone")]
+#[case::tonit_tonight("tonit", "tonight")]
 #[case::tho("tho", "though")]
 #[case::thru("thru", "through")]
 #[case::ghoti("ghoti", "fish")]

@@ -1,5 +1,7 @@
 use crate::sound::Sound;
+use flexi_logger::{colored_opt_format, Duplicate, Logger, LoggerHandle};
 use lazy_static::lazy_static;
+use log::{debug, error};
 use serde::{Deserialize, Serialize};
 use std::collections::{BTreeMap, BTreeSet, HashMap, HashSet};
 use std::fs::File;
@@ -10,13 +12,13 @@ mod lib_test;
 mod sound;
 
 #[derive(Debug, Serialize, Deserialize)]
-struct Spelling {
+pub struct Spelling {
     sounds: Vec<Sound>,
 }
 
 #[derive(Debug, Serialize, Deserialize)]
-struct Spellings {
-    spellings: BTreeMap<String, Spelling>,
+pub struct Spellings {
+    pub spellings: BTreeMap<String, Spelling>,
 }
 
 #[derive(Debug, Serialize, Deserialize)]
@@ -114,12 +116,23 @@ lazy_static! {
     };
 }
 
-fn phonemize(deserialized_spellings: &Spellings, original_word: String) -> Vec<String> {
-    // Create a BTreeMap map for efficient diphthong lookup
-    let mut key_map: BTreeMap<String, bool> = BTreeMap::new();
-    for spelling in deserialized_spellings.spellings.keys() {
-        key_map.insert(spelling.to_string(), true);
-    }
+trait DiphthongLookup {
+    fn contains(&self, diphthong: &str) -> bool;
+}
+
+pub fn phonemize<T>(
+    deserialized_spellings: &Spellings,
+    original_word: &str,
+    data_structure: &T,
+) -> Vec<String>
+where
+    T: DiphthongLookup, // Define a trait for diphthong lookup
+{
+    // // Create a BTreeMap map for efficient diphthong lookup
+    // let mut key_map: BTreeMap<String, bool> = BTreeMap::new();
+    // for spelling in deserialized_spellings.spellings.keys() {
+    //     key_map.insert(spelling.to_string(), true);
+    // }
 
     let mut diphthong_array = Vec::new();
     let mut offset = 0;
@@ -130,7 +143,7 @@ fn phonemize(deserialized_spellings: &Spellings, original_word: String) -> Vec<S
     while offset + size < size_of_original_word {
         // Find the longest matching diphthong
         while offset + size + 1 <= size_of_original_word
-            && key_map.contains_key(&original_word[offset..(offset + size + 1)])
+            && data_structure.contains(&original_word[offset..(offset + size + 1)])
         {
             size += 1;
         }
@@ -141,6 +154,12 @@ fn phonemize(deserialized_spellings: &Spellings, original_word: String) -> Vec<S
     }
 
     diphthong_array
+}
+
+impl DiphthongLookup for BTreeMap<String, bool> {
+    fn contains(&self, diphthong: &str) -> bool {
+        self.contains_key(diphthong)
+    }
 }
 
 // A recursive function that generates permutations of phoneme combinations after initial phoneme parse
@@ -169,7 +188,7 @@ fn gen_phoneme_permutations(
     gen_phoneme_permutations(original, next_current, index + 1, result);
 }
 
-fn read_spellings_yaml() -> Option<String> {
+pub fn read_spellings_yaml() -> Option<String> {
     // Specify the path to the YAML file
     let file_path = "spellings.yaml";
 
@@ -177,7 +196,7 @@ fn read_spellings_yaml() -> Option<String> {
     let yaml_string = match read_yaml_file(file_path) {
         Ok(content) => content,
         Err(err) => {
-            eprintln!("Error reading YAML file: {}", err);
+            error!("Error reading YAML file: {}", err);
             return None;
         }
     };
@@ -192,7 +211,7 @@ fn read_spellings_yaml() -> Option<String> {
 //     let yaml_string = match read_yaml_file(file_path) {
 //         Ok(content) => content,
 //         Err(err) => {
-//             eprintln!("Error reading YAML file: {}", err);
+//             error!("Error reading YAML file: {}", err);
 //             return None;
 //         }
 //     };
@@ -208,6 +227,9 @@ fn read_spellings_yaml() -> Option<String> {
 // }
 
 pub fn get_possible_corrections(original_word: String) -> BTreeSet<String> {
+    // Initialize logger with color configuration
+    initialize_logger();
+
     let spellings = read_spellings_yaml().unwrap();
 
     // Deserialize the YAML string back to a struct
@@ -222,22 +244,32 @@ pub fn get_possible_corrections(original_word: String) -> BTreeSet<String> {
     // let deserialized_graphemes: Graphemes = serde_yaml::from_str(&graphemes).expect("Failed to deserialize YAML");
 
     // // Access fields and print the deserialized struct
-    // println!("Deserialized Struct:");
+    // debug!("Deserialized Struct:");
     // for (spelling, spelling_data) in deserialized_example.spellings.iter() {
-    //     println!("Spelling: {}", spelling);
-    //     println!("Sounds: {:?}", spelling_data.sounds);
+    //     debug!("Spelling: {}", spelling);
+    //     debug!("Sounds: {:?}", spelling_data.sounds);
     // }
 
-    let phoneme_array = phonemize(&deserialized_spellings, original_word.to_string());
+    let data_structure_btreemap: BTreeMap<String, bool> = deserialized_spellings
+        .spellings
+        .keys()
+        .map(|spelling| (spelling.to_string(), true))
+        .collect();
 
-    println!("{:?}", phoneme_array);
+    let phoneme_array = phonemize(
+        &deserialized_spellings,
+        &original_word.to_string(),
+        &data_structure_btreemap,
+    );
+
+    debug!("{:?}", phoneme_array);
 
     let mut parsings_array_set: HashSet<Vec<String>> = HashSet::new();
 
     parsings_array_set.insert(phoneme_array);
     //gen_phoneme_permutations(&phoneme_array, Vec::new(), 0, &mut parsings_array_set);  // FIXME - only create the permutations if words not found for first parse, save time, more efficient
 
-    println!("{:?}", parsings_array_set);
+    debug!("{:?}", parsings_array_set);
 
     let parsings_array: Vec<Vec<String>> = parsings_array_set.into_iter().collect();
 
@@ -259,11 +291,11 @@ pub fn get_possible_corrections(original_word: String) -> BTreeSet<String> {
             );
         }
 
-        // println!("sounds_array len {:?}", sounds_array.len());
-        println!("sounds_array {:?}", sounds_array);
+        // debug!("sounds_array len {:?}", sounds_array.len());
+        debug!("sounds_array {:?}", sounds_array);
 
         for sound in sounds_array.iter() {
-            println!("{:?}", sound);
+            debug!("{:?}", sound);
         }
 
         // Create the spelling permutations:
@@ -273,7 +305,7 @@ pub fn get_possible_corrections(original_word: String) -> BTreeSet<String> {
         word_spelling_permutations.sort();
         word_spelling_permutations.dedup();
 
-        println!(
+        debug!(
             "{} permutations {:?}",
             word_spelling_permutations.len(),
             word_spelling_permutations
@@ -298,7 +330,43 @@ pub fn get_possible_corrections(original_word: String) -> BTreeSet<String> {
         }
     }
 
-    println!("{:?}", possible_corrections);
+    debug!("{:?}", possible_corrections);
 
     possible_corrections
 }
+
+fn initialize_logger() {
+    Logger::try_with_str("trace")
+        .unwrap()
+        .duplicate_to_stdout(Duplicate::Trace)
+        .format_for_stderr(colored_opt_format)
+        .set_palette("b9;b11;b2;b4;b6".parse().unwrap())
+        .start()
+        .unwrap();
+}
+
+// #[cfg(test)]
+// mod tests {
+//     use super::*;
+//
+//     #[test]
+//     fn phonemizes_words_with_known_diphthongs() {
+//         let deserialized_spellings = Spellings {
+//             spellings: vec![
+//                 ("ea".to_string(), "iy".to_string()),
+//                 ("ai".to_string(), "ey".to_string()),
+//             ]
+//             .into_iter()
+//             .collect(),
+//         };
+//
+//         assert_eq!(
+//             phonemize(&deserialized_spellings, "steak".to_string()),
+//             vec!["st", "iy", "k"]
+//         );
+//         assert_eq!(
+//             phonemize(&deserialized_spellings, "rain".to_string()),
+//             vec!["r", "ey", "n"]
+//         );
+//     }
+// }
